@@ -1,0 +1,32 @@
+:root {
+  /* Anauê Design — Clean & Modern Corporate */
+  --primary-color: #2d4e9e;
+  --primary-rgb: 45, 78, 158;
+  --primary-filter: 15,26,53;
+  --accent-color: #78b652;
+  --accent-rgb: 120, 182, 82;
+
+  /* Design Tokens */
+  --bg-page: #ecf1f5;
+  --text-primary: #1a1a1a;
+  --text-secondary: #5a6a7a;
+  --brand-primary: #2d4e9e;
+  --brand-accent: #78b652;
+  --brand-accent-hover: #5f9a3e;
+
+  /* Shadows */
+  --shadow-soft: 0 4px 20px rgba(0,0,0,0.06);
+  --shadow-hover: 0 8px 32px rgba(0,0,0,0.12);
+
+  /* Typography */
+  --font-primary: 'Plus Jakarta Sans', 'Inter', sans-serif;
+
+  /* Radius */
+  --radius-card: 12px;
+
+  /* Status Colors */
+  --danger-color: #E57373;
+  --success-color: #78b652;
+  --info-color: #2d4e9e;
+  --warning-color: #ffc107;
+}

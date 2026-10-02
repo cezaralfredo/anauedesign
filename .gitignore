@@ -1,0 +1,19 @@
+# Dependency directories
+node_modules/
+
+# Environment and logs
+.env
+.env.local
+*.log
+npm-debug.log*
+
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace

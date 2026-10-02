@@ -1,0 +1,111 @@
+# ============================================================
+# Anauê Design · robots.txt
+# Atualizado: 2026-10-02
+# Estratégia: GEO (Generative Engine Optimization)
+# Permitir todos os crawlers de busca e IA para máxima
+# visibilidade em ChatGPT, Gemini, Perplexity, Claude, etc.
+# ============================================================
+
+# ---------- Crawlers de busca tradicionais ----------
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# ---------- Ferramentas de Auditoria e SEO (Ahrefs, Semrush) ----------
+User-agent: AhrefsBot
+Allow: /
+
+User-agent: AhrefsSiteAudit
+Allow: /
+
+User-agent: SemrushBot
+Allow: /
+
+# ---------- OpenAI / ChatGPT ----------
+# GPTBot: rastreia para treinar modelos OpenAI
+User-agent: GPTBot
+Allow: /
+
+# OAI-SearchBot: rastreia para respostas em tempo real no ChatGPT
+User-agent: OAI-SearchBot
+Allow: /
+
+# ChatGPT-User: usado pelo plugin de navegação do ChatGPT
+User-agent: ChatGPT-User
+Allow: /
+
+# ---------- Anthropic / Claude ----------
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# ---------- Google AI / Gemini ----------
+# Google-Extended: controla uso do conteúdo para treinamento do Gemini
+User-agent: Google-Extended
+Allow: /
+
+# ---------- Perplexity ----------
+User-agent: PerplexityBot
+Allow: /
+
+# ---------- Meta AI (Llama) ----------
+User-agent: FacebookBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# ---------- Apple ----------
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# ---------- Amazon / Alexa ----------
+User-agent: ia_archiver
+Allow: /
+
+# ---------- Bytedance / TikTok ----------
+User-agent: Bytespider
+Allow: /
+
+# ---------- Cohere ----------
+User-agent: cohere-ai
+Allow: /
+
+# ---------- Outros agentes de IA emergentes ----------
+User-agent: YouBot
+Allow: /
+
+User-agent: ImagesiftBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+# ---------- Padrão global ----------
+User-agent: *
+Allow: /
+
+# ---------- Sitemap ----------
+Sitemap: https://anauedesign.com.br/sitemap.xml

@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import url("variables.css");
+
+@import url("_general.css");
+@import url("_preloader.css");
+@import url("_ui.css");
+@import url("_datepicker.css");
+@import url("_timepicker.css");
+@import url("_carousel.css");
+@import url("_carousel-home-screen.css");
+@import url("_slider.css");
+@import url("_testimonials.css");
+@import url("_floating-action.css");
+@import url("_tooltips.css");
+@import url("_buttons.css");
+@import url("_badges.css");
+@import url("_blockquotes.css");
+@import url("_pagination.css");
+@import url("_spinners.css");
+@import url("_accordion.css");
+@import url("_waves.css");
+@import url("_modal.css");
+@import url("_topbar.css");
+@import url("_navigation.css");
+@import url("_navigation-centered.css");
+@import url("_navigation-dark.css");
+@import url("_navigation-colored.css");
+@import url("_subpages.css");
+@import url("_footer.css");
+@import url("_footer-light.css");
+@import url("_footer-colored.css");
+@import url("_footer-minimal.css");
+@import url("_dropdown.css");
+@import url("_collection.css");
+@import url("_progress.css");
+@import url("_backtotop.css");
+@import url("_cards.css");
+@import url("_tabs.css");
+@import url("_iconboxes.css");
+@import url("_chips.css");
+@import url("_form-range-sliders.css");
+@import url("_switches.css");
+@import url("_form-elements.css");
+@import url("_settings.css");
+@import url("_parallax.css");
+@import url("_chat.css");
+@import url("_calendar.css");
+@import url("_events.css");
+@import url("_mailbox.css");
+@import url("_profile.css");
+@import url("_timeline.css");
+@import url("_portfolio.css");
+@import url("_blogs.css");
+@import url("_products.css");
+@import url("_login.css");
+@import url("_welcome.css");
+@import url("_error.css");
+@import url("_search.css");
+@import url("_pricing.css");
+@import url("_invoice.css");
+@import url("_notifications.css");
+@import url("_profile-edit.css");
+@import url("_app-settings.css");
+@import url("_clients.css");
+@import url("_fixed-footer-menu.css");
+@import url("_perfect-scrollbar.css");
+@import url("_tables.css");
+@import url("_contactus.css");
+@import url("_fancybox.css");
+@import url("_image-filter.css");
+@import url("_shadow.css");
+@import url("_team.css");
+@import url("_charts.css");
+@import url("_activity.css");
+@import url("_site-darkmode.css");
+/*
+body[data-header="dark"]  a>img[src="assets/images/logo-anaue-negativo.png"] {display:inline-block;}
+body[data-header="dark"]  a>img[src="assets/images/logo-anaue.png"] {display:none;}
+body[data-header="light"] a>img[src="assets/images/logo-anaue-negativo.png"] {display:none;}
+body[data-header="light"] a>img[src="assets/images/logo-anaue.png"] {display:inline-block;}
+*/
+
+.footer-menu a.active[href="hospedagem.html"] > i {margin-left:14px}
+
+#logo-container.brand-logo {display:contents!important;}
+/*
+nav.navigation.logo_on_fixed .brand-logo {display: initial!important;}
+*/
+
+a[data-target=""].nav-site-mode,
+a[data-target="slide-nav"].show-on-large {background-color:var(--bg-page, #ecf1f5)}
+body[data-footer_menu_style="dark"] a[data-target=""].nav-site-mode,
+body[data-footer_menu_style="dark"] a[data-target="slide-nav"].show-on-large {background-color:transparent}
+body[style="overflow: hidden;"] a[data-target=""].nav-site-mode {background-color:transparent}
+
+@media only screen and (max-width: 992px) {
+  nav .brand-logo { left: inherit!important;}
+}
+
+@media only screen and (min-width: 768px) {
+	 nav a i.mdi-arrow-left,
+	.footer-menu {display:none}
+	[data-footer_menu="show"] .page-footer {margin-bottom:0}
+	.instagram-app {display:none!important;}
+	.instagram-web {display:inline-block!important;}
+}
+
+@media only screen and (max-width: 768px) {
+	.instagram-app {display:inline-block!important;}
+	.instagram-web {display:none!important;}
+	.asw-widget {display:none!important;}
+}

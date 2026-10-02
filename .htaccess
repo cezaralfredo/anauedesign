@@ -1,0 +1,146 @@
+# ==============================================================================
+# 🛡️ ANAUÊ DESIGN - CONFIGURAÇÃO DE SEGURANÇA E PERFORMANCE (.htaccess)
+# ==============================================================================
+
+# 0. DEFINIR ARQUIVO PRINCIPAL
+DirectoryIndex index.html index.php
+
+# 1. CANONICALIZAÇÃO DE DOMÍNIO, HTTPS E INDEX.HTML
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Forçar non-www (www.anauedesign.com.br -> anauedesign.com.br)
+    RewriteCond %{HTTP_HOST} ^www\.anauedesign\.com\.br$ [NC]
+    RewriteRule ^(.*)$ https://anauedesign.com.br/$1 [L,R=301]
+
+    # Forçar HTTPS
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
+    RewriteCond %{HTTP:X-Forwarded-SSL} !on [NC]
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Redirecionar /index.html para raiz /
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/ [NC]
+    RewriteRule ^index\.html$ https://anauedesign.com.br/ [R=301,L]
+</IfModule>
+
+# 2. CABEÇALHOS HTTP DE SEGURANÇA (HTTP RESPONSE HEADERS)
+<IfModule mod_headers.c>
+    # Forçar HTTPS por 1 ano com subdomínios (HSTS)
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+    # Bloquear Clickjacking real (impede embutir em <iframe>)
+    Header always set X-Frame-Options "DENY"
+
+    # Impedir MIME-Sniffing de arquivos
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Política de Referenciador estrita e segura
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Desativar recursos e sensores não utilizados do navegador
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), display-capture=(), accelerometer=(), gyroscope=(), magnetometer=()"
+
+    # Desativar auditor XSS legado obsoleto (recomendação OWASP)
+    Header always set X-XSS-Protection "0"
+
+    # Content Security Policy (CSP real do servidor)
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com; frame-src https://www.google.com https://www.youtube.com; form-action 'self' https://wa.me; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests"
+
+    # Ocultar assinaturas de servidor e linguagem
+    Header unset X-Powered-By
+    Header unset Server
+</IfModule>
+
+# 3. PROTEÇÃO DE ARQUIVOS SENSÍVEIS E DIRETÓRIOS
+# Desativar listagem pública de pastas
+Options -Indexes
+
+# Bloquear acesso direto a arquivos de configuração, scripts de build e código-fonte
+<FilesMatch "^(\.env|\.git|package\.json|package-lock\.json|server\.js|abrir_site\.bat|\.htaccess|\.user\.ini|web\.config)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order deny,allow
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# 4. SUPORTE A URLS LIMPAS (SEM EXTENSÃO .HTML)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^(.*)$ $1.html [L]
+</IfModule>
+
+# 5. PÁGINA PERSONALIZADA DE ERRO 404
+ErrorDocument 404 /404.html
+
+# 6. OTIMIZAÇÃO DE CACHE DE NAVEGADOR
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+
+    # Imagens e ícones
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+
+    # Fontes
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+
+    # CSS e JavaScript
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+
+    # HTML
+    ExpiresByType text/html "access plus 0 seconds"
+
+    # Arquivos de texto, SEO e bots (robots.txt, llms.txt, sitemaps)
+    ExpiresByType text/plain "access plus 1 day"
+    ExpiresByType text/markdown "access plus 1 day"
+    ExpiresByType application/xml "access plus 1 day"
+    ExpiresByType text/xml "access plus 1 day"
+</IfModule>
+
+# 6.1. CABEÇALHOS ESPECÍFICOS PARA ROBOTS, SITEMAP E IA
+<FilesMatch "^(robots\.txt|sitemap\.xml|llms\.txt)$">
+    <IfModule mod_headers.c>
+        Header set Access-Control-Allow-Origin "*"
+        Header set Cache-Control "public, max-age=86400, stale-while-revalidate=3600"
+    </IfModule>
+</FilesMatch>
+
+# 7. COMPRESSÃO GZIP (MOD_DEFLATE)
+<IfModule mod_deflate.c>
+    # Ativar compressão para tipos de texto e fontes
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/atom+xml
+    AddOutputFilterByType DEFLATE font/ttf
+    AddOutputFilterByType DEFLATE font/otf
+    AddOutputFilterByType DEFLATE font/woff
+    AddOutputFilterByType DEFLATE font/woff2
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE image/x-icon
+
+    # Compatibilidade com proxies
+    <IfModule mod_headers.c>
+        Header append Vary Accept-Encoding
+    </IfModule>
+</IfModule>
+

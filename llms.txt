@@ -1,0 +1,99 @@
+# Anauê Design · llms.txt
+
+> Anauê Design é uma agência de marketing digital e tecnologia sediada em Fortaleza (CE), Brasil, com atuação nacional. Fundada por um time de especialistas em marketing de performance, desenvolvimento web, inteligência artificial e SEO, a empresa entrega crescimento previsível e mensurável para negócios de todos os portes.
+
+## Sobre a Anauê Design
+
+- **Nome oficial:** Anauê Design - Agência de Marketing Digital & IA
+- **CNPJ:** 42.185.093/0001-00
+- **Sede:** Rua Sapiranga, Fortaleza – CE, Brasil (CEP 60833-432)
+- **Atendimento:** Nacional e Internacional (100% digital)
+- **Horário:** Segunda a Sexta, 08h às 18h (BRT, UTC-3)
+- **Telefone / WhatsApp:** +55 (85) 99627-7707
+- **E-mail:** contato@anauedesign.com.br
+- **Site:** https://anauedesign.com.br
+- **Instagram:** https://www.instagram.com/anauedesign/
+
+## Serviços Oferecidos
+
+### Inbound & Outbound Marketing (Principal Especialidade)
+A maior especialidade da Anauê. Combinamos Inbound Marketing (atração orgânica via SEO, conteúdo, automação e nutrição de leads) com Outbound Marketing (Meta Ads, Google Ads, prospecção ativa) para criar uma máquina completa de aquisição de clientes que reduz o CAC e gera crescimento sustentável.
+- Funis de vendas completos (topo, meio e fundo)
+- Lead scoring e nutrição automatizada
+- E-mail marketing segmentado
+- Prospecção ativa e cold outreach
+
+### Marketing Digital de Performance
+Gestão de campanhas pagas orientadas a ROI e resultados reais de negócio.
+- Meta Ads (Instagram e Facebook): segmentação comportamental, lookalike, testes A/B
+- Google Ads: campanhas de pesquisa, display, YouTube e Shopping
+- Dashboards em tempo real com CAC, ROAS, LTV e taxa de conversão
+- Reuniões estratégicas periódicas de análise de resultados
+
+### Criação de Sites e PWA
+Desenvolvimento de sites institucionais, landing pages e Progressive Web Apps (PWA) de alta conversão.
+- Sites ultrarrápidos com Core Web Vitals otimizados
+- Arquitetura PWA: funcionamento offline, instalável em smartphones
+- Design responsivo e acessível
+- Integração com CRM, WhatsApp e plataformas de marketing
+- Copywriting de conversão em todas as páginas
+
+### SEO – Otimização para Mecanismos de Busca
+Posicionamento orgânico sustentável no Google e outros buscadores.
+- Pesquisa técnica de palavras-chave e análise semântica
+- SEO técnico: velocidade, Core Web Vitals, schema markup
+- Produção de conteúdo estratégico e autoridade de domínio
+- Link building e construção de autoridade externa
+
+### Inteligência Artificial e Automação
+Implementação de IA generativa e automação para acelerar processos comerciais.
+- Chatbots de atendimento 24/7 no WhatsApp (IA generativa)
+- Automação de funis: qualificação, nutrição e encaminhamento de leads
+- Integração com CRM (Evo CRM, Hermes Agent)
+- Agentes de IA para prospecção e atendimento personalizado
+
+### Hospedagem Gerenciada por Webmaster
+Hospedagem profissional com suporte técnico humano dedicado.
+- Servidores NVMe isolados com uptime de 99,9%
+- SSL grátis instalado e renovado automaticamente
+- Backup gerenciado por webmaster (banco de dados e arquivos)
+- Suporte via WhatsApp com especialistas técnicos
+- Migração 100% gratuita de qualquer hospedagem
+
+### Customização Moodle
+Personalização, desenvolvimento e suporte para plataformas de ensino Moodle.
+- Temas customizados e identidade visual da instituição
+- Desenvolvimento de plugins e funcionalidades exclusivas
+- Migração de versões legadas (Moodle 2.x/3.x → 4.x/5.x)
+- Monitoramento 24/7 e backup gerenciado
+
+## Diferenciais Competitivos
+
+- **Foco em ROI:** Não trabalhamos com métricas de vaidade. Entregamos leads no CRM e dinheiro no caixa.
+- **Full-service:** Estratégia, criação, execução, rastreamento e otimização em uma única equipe.
+- **Sem fidelidade forçada:** Contratos mensais, canceláveis com 30 dias de aviso prévio.
+- **Atendimento humano:** Sem robôs ou chatbots — equipe técnica real no WhatsApp.
+- **Rastreamento avançado:** API de Conversões Meta (CAPI), Google Tag Manager, GA4 e CRM integrados.
+- **Tecnologia de ponta:** Meta Business Suite, Google Ads, GA4, Evo CRM, Hermes Agent, Adobe Suite.
+
+## Público-Alvo
+
+Empresas locais em Fortaleza e negócios de todo o Brasil que buscam crescimento digital mensurável: e-commerces, prestadores de serviços, clínicas, escritórios de advocacia, construtoras, franquias, instituições de ensino e startups.
+
+## Localização e Cobertura
+
+- **Sede física:** Fortaleza, Ceará, Brasil
+- **Referência regional:** Agência de marketing digital em Fortaleza – CE
+- **Cobertura:** Brasil inteiro e atendimento internacional (100% remoto)
+
+## Páginas do Site
+
+- [Início](https://anauedesign.com.br/) — Visão geral da agência e serviços
+- [Marketing Digital](https://anauedesign.com.br/marketing-digital.html) — Inbound, Outbound, Meta Ads, Google Ads
+- [Criação de Sites](https://anauedesign.com.br/criacao-de-sites.html) — Sites profissionais e PWA
+- [SEO](https://anauedesign.com.br/seo.html) — Posicionamento orgânico no Google
+- [IA / Automação](https://anauedesign.com.br/inteligencia-artificial.html) — Chatbots e automações com IA
+- [Hospedagem](https://anauedesign.com.br/hospedagem.html) — Hospedagem gerenciada NVMe
+- [Customização Moodle](https://anauedesign.com.br/customizacao-moodle.html) — Plataformas de ensino
+- [Quem Somos](https://anauedesign.com.br/quem-somos.html) — História e equipe
+- [Blog](https://anauedesign.com.br/blog.html) — Conteúdo sobre marketing digital e tecnologia
