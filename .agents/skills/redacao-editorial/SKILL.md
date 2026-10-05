@@ -71,7 +71,12 @@ Antes de escrever qualquer linha, o agente DEVE pesquisar e apurar dados factuai
 
 ## 5. Estrutura Padrão do Artigo (Padrão E-E-A-T e Schema.org)
 Todo artigo gerado deve conter:
-1. **Título Jornalístico Forte:** Chamativo, informativo e focado na intenção de busca.
+1. **Título Jornalístico Forte e Atemporal (Evergreen):** Chamativo, informativo, focado na dor ou oportunidade do cliente e na intenção de busca orgânica.
+   - **REGRA CRÍTICA DE ATEMPORALIDADE:** **NÃO use anos (ex: "2026", "em 2026") no título (H1, `<title>`, Open Graph), na URL/slug ou nas chamadas.** Os conteúdos devem ser perenes (evergreen), mantendo relevância contínua sem parecerem datados ou obsoletos com o passar do tempo. Exemplos:
+     * *Em vez de:* "Por Que Empresas Estão Trocando Apps Nativos por PWAs em 2026?"
+     * *Use:* "Por Que Empresas Estão Trocando Apps Nativos por PWAs? Guia de Performance e Conversão"
+     * *Em vez de:* "GEO: O Guia Definitivo para 2026"
+     * *Use:* "GEO (Generative Engine Optimization): O Guia Definitivo para Posicionamento em IAs"
 2. **Lead / Gancho Editorial:** Os primeiros dois parágrafos devem contextualizar o problema com urgência e relevância de mercado.
 3. **Corpo do Texto (1.200 a 2.000 palavras):**
    - Intertítulos H2 e H3 bem estruturados.
