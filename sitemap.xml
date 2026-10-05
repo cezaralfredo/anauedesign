@@ -47,7 +47,7 @@
   </url>
   <url>
     <loc>https://anauedesign.com.br/blog.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -62,6 +62,12 @@
     <lastmod>2026-10-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://anauedesign.com.br/blog/pwa-alta-conversao-2026.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://anauedesign.com.br/blog/geo-generative-engine-optimization-2026.html</loc>
