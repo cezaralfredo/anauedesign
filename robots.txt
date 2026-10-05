@@ -1,13 +1,37 @@
 # ============================================================
 # Anauê Design · robots.txt
-# Atualizado: 2026-10-02
-# Estratégia: GEO (Generative Engine Optimization)
-# Permitir todos os crawlers de busca e IA para máxima
-# visibilidade em ChatGPT, Gemini, Perplexity, Claude, etc.
+# Estratégia: GEO (Generative Engine Optimization) e SEO Global
+# Permitir todos os crawlers de busca tradicionais e bots de IA
 # ============================================================
 
-# ---------- Crawlers de busca tradicionais ----------
+# ---------- Padrão Universal (Garante acesso irrestrito) ----------
+User-agent: *
+Allow: /
+
+# ---------- Ferramentas de Auditoria & SEO Técnico ----------
+User-agent: AhrefsBot
+Allow: /
+
+User-agent: AhrefsSiteAudit
+Allow: /
+
+User-agent: SemrushBot
+Allow: /
+
+User-agent: Rogerbot
+Allow: /
+
+User-agent: DotBot
+Allow: /
+
+# ---------- Crawlers de Busca Tradicionais ----------
 User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile
 Allow: /
 
 User-agent: Bingbot
@@ -22,30 +46,21 @@ Allow: /
 User-agent: Baiduspider
 Allow: /
 
-# ---------- Ferramentas de Auditoria e SEO (Ahrefs, Semrush) ----------
-User-agent: AhrefsBot
+User-agent: YandexBot
 Allow: /
 
-User-agent: AhrefsSiteAudit
-Allow: /
-
-User-agent: SemrushBot
-Allow: /
-
-# ---------- OpenAI / ChatGPT ----------
-# GPTBot: rastreia para treinar modelos OpenAI
+# ---------- Motores de Inteligência Artificial & LLMs ----------
+# OpenAI
 User-agent: GPTBot
 Allow: /
 
-# OAI-SearchBot: rastreia para respostas em tempo real no ChatGPT
 User-agent: OAI-SearchBot
 Allow: /
 
-# ChatGPT-User: usado pelo plugin de navegação do ChatGPT
 User-agent: ChatGPT-User
 Allow: /
 
-# ---------- Anthropic / Claude ----------
+# Anthropic (Claude)
 User-agent: ClaudeBot
 Allow: /
 
@@ -58,54 +73,46 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
-# ---------- Google AI / Gemini ----------
-# Google-Extended: controla uso do conteúdo para treinamento do Gemini
+# Google Gemini / DeepMind
 User-agent: Google-Extended
 Allow: /
 
-# ---------- Perplexity ----------
+# Perplexity AI
 User-agent: PerplexityBot
 Allow: /
 
-# ---------- Meta AI (Llama) ----------
+# Meta AI (Llama)
 User-agent: FacebookBot
 Allow: /
 
 User-agent: meta-externalagent
 Allow: /
 
-# ---------- Apple ----------
+# Apple Intelligence
 User-agent: Applebot
 Allow: /
 
 User-agent: Applebot-Extended
 Allow: /
 
-# ---------- Amazon / Alexa ----------
+# Amazon Alexa / AWS
 User-agent: ia_archiver
 Allow: /
 
-# ---------- Bytedance / TikTok ----------
+# ByteDance / TikTok
 User-agent: Bytespider
 Allow: /
 
-# ---------- Cohere ----------
+# Cohere AI
 User-agent: cohere-ai
 Allow: /
 
-# ---------- Outros agentes de IA emergentes ----------
+# Buscadores de IA Emergentes
 User-agent: YouBot
-Allow: /
-
-User-agent: ImagesiftBot
 Allow: /
 
 User-agent: Diffbot
 Allow: /
 
-# ---------- Padrão global ----------
-User-agent: *
-Allow: /
-
-# ---------- Sitemap ----------
+# ---------- Sitemaps & Índices Estruturados ----------
 Sitemap: https://anauedesign.com.br/sitemap.xml

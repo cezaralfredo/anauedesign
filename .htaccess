@@ -113,7 +113,8 @@ ErrorDocument 404 /404.html
 <FilesMatch "^(robots\.txt|sitemap\.xml|llms\.txt)$">
     <IfModule mod_headers.c>
         Header set Access-Control-Allow-Origin "*"
-        Header set Cache-Control "public, max-age=86400, stale-while-revalidate=3600"
+        Header set Cache-Control "public, max-age=3600, must-revalidate"
+        Header unset X-Frame-Options
     </IfModule>
 </FilesMatch>
 
