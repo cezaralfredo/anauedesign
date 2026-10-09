@@ -1,0 +1,2156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RIA360° · Recepcionista com IA para Salões e Clínicas de Estética | Anauê Design</title>
+  
+  <!-- Preconnect and Google Fonts: Plus Jakarta Sans + Instrument Serif for dual-font editorial contrast -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       DESIGN SYSTEM - ANAUÊ DESIGN · RIA360°
+       Palette: Anauê Royal Blue (#2957A4), Anauê Vibrant Green (#57B952 / #38A149),
+                Slate Charcoal (#182230), Soft Neutral (#F8FAFC)
+       ========================================================================== */
+    :root {
+      --brand-blue: #2957A4;
+      --brand-blue-dark: #1C3F7A;
+      --brand-blue-deep: #132C55;
+      --brand-blue-light: #EEF4FD;
+      --brand-blue-border: #D3E2F8;
+
+      --brand-green: #38A149;
+      --brand-green-hover: #2F8A3E;
+      --brand-green-light: #EDF9EE;
+      --brand-green-border: #C8ECCB;
+
+      --wa-green: #25D366;
+      --wa-green-dark: #128C7E;
+
+      --text-main: #182230;
+      --text-body: #3E4B5E;
+      --text-muted: #64748B;
+      --text-light: #94A3B8;
+
+      /* Background 15% darker for richer contrast & elevated white cards */
+      --bg-main: #EBF0F6;
+      --bg-alt: #DEE5EE;
+      --bg-card: #FFFFFF;
+      --bg-dark: #0D1525;
+      --bg-dark-card: #152037;
+
+      --border-subtle: #C4D3E5;
+      --border-card: #CCD9E8;
+
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-serif: 'Instrument Serif', Georgia, serif;
+
+      /* Shadows 15% darker for sharp, premium depth */
+      --shadow-sm: 0 2px 6px rgba(12, 28, 56, 0.09);
+      --shadow-md: 0 12px 30px -6px rgba(12, 28, 56, 0.15), 0 4px 12px -2px rgba(12, 28, 56, 0.08);
+      --shadow-lg: 0 22px 48px -8px rgba(12, 28, 56, 0.22), 0 8px 18px -4px rgba(12, 28, 56, 0.12);
+      --shadow-xl: 0 32px 64px -10px rgba(12, 28, 56, 0.30);
+
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-pill: 9999px;
+    }
+
+    /* Reset & Base Setup */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      color-scheme: light;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--text-main);
+      background-color: var(--bg-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    /* Container */
+    .c {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* Section Spacing */
+    .sec {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .sec.alt {
+      background-color: var(--bg-alt);
+    }
+
+    .sec.dark {
+      background-color: var(--bg-dark);
+      color: #FFFFFF;
+      overflow: hidden;
+    }
+
+    /* Typography Hierarchy & Dual Font Styling */
+    h1, h2, h3 {
+      color: var(--text-main);
+      letter-spacing: -0.025em;
+    }
+
+    .dark h1, .dark h2, .dark h3 {
+      color: #FFFFFF;
+    }
+
+    h1 {
+      font-size: 54px;
+      line-height: 1.12;
+      font-weight: 800;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: 40px;
+      line-height: 1.2;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 22px;
+      line-height: 1.35;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    /* Editorial Serif Accent: Elegant, Italic, Sophisticated */
+    .font-serif {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      font-style: italic;
+    }
+
+    h1 .font-serif {
+      font-size: 1.08em;
+      color: var(--brand-blue);
+    }
+
+    h2 .font-serif {
+      font-size: 1.08em;
+      color: var(--brand-blue);
+    }
+
+    .dark h2 .font-serif {
+      color: #72E083;
+    }
+
+    /* Lead paragraph with optimized reading comfort */
+    .lead {
+      font-size: 19px;
+      line-height: 1.65;
+      color: var(--text-body);
+      max-width: 660px;
+      font-weight: 450;
+    }
+
+    .dark .lead {
+      color: #D2D9E5;
+    }
+
+    /* Eyebrow Label */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brand-blue);
+      background: var(--brand-blue-light);
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 18px;
+      border: 1px solid var(--brand-blue-border);
+    }
+
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: var(--brand-green);
+      display: inline-block;
+      animation: pulseDot 2s infinite ease-in-out;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+
+    /* ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(235, 240, 246, 0.94);
+      border-bottom: 1px solid rgba(196, 211, 229, 0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+      transition: all 0.3s ease;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      gap: 20px;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-logo-img {
+      height: 44px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .brand-separator {
+      height: 28px;
+      width: 1.5px;
+      background-color: #CBD5E1;
+      display: inline-block;
+    }
+
+    .brand-product {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-name {
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--brand-blue);
+      line-height: 1.1;
+    }
+
+    .product-tag {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--brand-green);
+    }
+
+    .nav-group {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    a.nav {
+      color: var(--text-body);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      transition: color 0.2s ease;
+      position: relative;
+      padding: 4px 0;
+    }
+
+    a.nav:hover {
+      color: var(--brand-blue);
+    }
+
+    a.nav::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--brand-green);
+      transition: width 0.25s ease;
+      border-radius: 2px;
+    }
+
+    a.nav:hover::after {
+      width: 100%;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 50px;
+      padding: 0 28px;
+      border-radius: var(--radius-pill);
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 15.5px;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      border: 1.5px solid transparent;
+      box-shadow: var(--shadow-sm);
+    }
+
+    
+    /* Menu CTA Button - 25% smaller to save space and look balanced */
+    .btn.btn-nav {
+      min-height: 38px;
+      padding: 0 16px;
+      font-size: 13.5px;
+      gap: 6px;
+      box-shadow: 0 4px 14px -2px rgba(56, 161, 73, 0.35);
+    }
+    .btn.btn-nav svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    .btn.wa {
+      background-color: var(--brand-green);
+      color: #FFFFFF;
+      box-shadow: 0 6px 20px -4px rgba(56, 161, 73, 0.38);
+    }
+
+    .btn.wa:hover {
+      background-color: var(--brand-green-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px -4px rgba(56, 161, 73, 0.45);
+    }
+
+    .btn.ghost {
+      border-color: var(--brand-blue);
+      color: var(--brand-blue);
+      background-color: transparent;
+    }
+
+    .btn.ghost:hover {
+      background-color: var(--brand-blue);
+      color: #FFFFFF;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px -4px rgba(41, 87, 164, 0.25);
+    }
+
+    /* ==========================================================================
+       HERO SECTION
+       ========================================================================== */
+    .hero-sec {
+      padding-top: 60px;
+      padding-bottom: 90px;
+      position: relative;
+      background: radial-gradient(circle at 10% 15%, rgba(41, 87, 164, 0.04) 0%, transparent 50%),
+                  radial-gradient(circle at 90% 85%, rgba(56, 161, 73, 0.05) 0%, transparent 45%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.95fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 36px;
+      align-items: center;
+    }
+
+    .hero-badge-trust {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 24px;
+      font-size: 14.5px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .hero-badge-trust svg {
+      color: var(--brand-green);
+      flex-shrink: 0;
+    }
+
+    /* Hero Visual Showcase */
+    .hero-visual-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      background: #FFFFFF;
+    }
+
+    /* Subtle background image of luxury salon */
+    .hero-photo-bg {
+      position: relative;
+      height: 190px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .hero-photo-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      filter: brightness(0.95) saturate(1.05);
+      transition: transform 0.6s ease;
+    }
+
+    .hero-photo-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(13, 21, 37, 0.25) 0%, rgba(13, 21, 37, 0.75) 100%);
+      display: flex;
+      align-items: flex-end;
+      padding: 16px 20px;
+    }
+
+    .hero-photo-caption {
+      color: #FFFFFF;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-photo-caption span {
+      background: rgba(255, 255, 255, 0.22);
+      backdrop-filter: blur(8px);
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* WhatsApp UI Container */
+    .chat-preview {
+      padding: 24px;
+      background: #F4F7FB;
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
+
+    .chat-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #E2E8F0;
+    }
+
+    .chat-user-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .chat-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--brand-blue), var(--brand-green));
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 14px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .chat-user-name {
+      font-weight: 700;
+      font-size: 14.5px;
+      color: var(--text-main);
+      line-height: 1.2;
+    }
+
+    .chat-user-status {
+      font-size: 12px;
+      color: var(--brand-green);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .chat-time {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    /* Message Bubbles */
+    .bub {
+      max-width: 86%;
+      padding: 13px 18px;
+      border-radius: 18px;
+      font-size: 14.5px;
+      line-height: 1.5;
+      position: relative;
+      animation: fadeInMsg 0.4s ease-out;
+    }
+
+    @keyframes fadeInMsg {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .bub.me {
+      align-self: flex-end;
+      background: #DCF8C6;
+      color: #111B21;
+      border-bottom-right-radius: 4px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+    }
+
+    .bub.ai {
+      align-self: flex-start;
+      background: #FFFFFF;
+      color: #111B21;
+      border: 1px solid #E2E8F0;
+      border-bottom-left-radius: 4px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+
+    .bub.ai.success {
+      background: #E8F8EC;
+      border-color: #BEE7C4;
+      color: #11421B;
+    }
+
+    .bub.ai.success strong {
+      color: #0E7A3E;
+    }
+
+    /* Floating Status Pill */
+    .floating-live-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #FFFFFF;
+      border: 1px solid var(--border-card);
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--brand-blue);
+      box-shadow: var(--shadow-md);
+      margin: 8px auto 0 auto;
+      width: fit-content;
+    }
+
+    /* ==========================================================================
+       SECTION: O PROBLEMA
+       ========================================================================== */
+    .grid {
+      display: grid;
+      gap: 28px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      margin-top: 48px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 34px 30px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--brand-blue-border);
+    }
+
+    .card p, .step p {
+      color: var(--text-body);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .card-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-md);
+      background: var(--brand-blue-light);
+      color: var(--brand-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+    }
+
+    .calc-card {
+      margin-top: 32px;
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(135deg, #FFF6F7 0%, #FFFFFF 100%);
+      border: 1.5px solid #FCD4DA;
+      border-radius: var(--radius-lg);
+      padding: 36px 40px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .calc-card h3 {
+      color: #9C142A;
+      margin-bottom: 6px;
+    }
+
+    .calc-card p {
+      color: #6C5458;
+      font-size: 16.5px;
+    }
+
+    .calc-result-pill {
+      font-weight: 800;
+      font-size: 26px;
+      color: #C2255C;
+      background: #FFFFFF;
+      padding: 14px 24px;
+      border-radius: var(--radius-md);
+      border: 1.5px solid #FBC7D1;
+      box-shadow: 0 4px 14px rgba(194, 37, 92, 0.12);
+      white-space: nowrap;
+    }
+
+    /* ==========================================================================
+       SECTION: COMO FUNCIONA (4 STEPS)
+       ========================================================================== */
+    .step-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 28px;
+      margin-top: 48px;
+    }
+
+    .step {
+      background: #FFFFFF;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 34px 26px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.28s ease;
+      position: relative;
+    }
+
+    .step:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--brand-blue);
+    }
+
+    .step .num {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--brand-blue), var(--brand-blue-dark));
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 18px;
+      margin-bottom: 22px;
+      box-shadow: 0 6px 14px rgba(41, 87, 164, 0.25);
+    }
+
+    /* ==========================================================================
+       SECTION: O QUE VOCÊ LEVA (FEATURES)
+       ========================================================================== */
+    .feat-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 34px 30px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.28s ease;
+    }
+
+    .feat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--brand-green);
+    }
+
+    .feat-icon-wrap {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      background: var(--brand-green-light);
+      color: var(--brand-green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    
+    /* ==========================================================================
+       SECTION: TABELA COMPARATIVA COM SCROLLBAR AZUL PERMANENTE
+       ========================================================================== */
+    .table-container {
+      margin-top: 48px;
+      overflow-x: scroll;
+      border: 1.5px solid var(--border-card);
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+      background: #FFFFFF;
+      box-shadow: var(--shadow-md);
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none; /* Esconde scrollbar nativa no Firefox para usar a permanente */
+    }
+
+    .table-container::-webkit-scrollbar {
+      display: none; /* Esconde scrollbar nativa no WebKit */
+      height: 0;
+    }
+
+    /* Barra de Rolagem Azul Permanente (NUNCA desaparece em descanso) */
+    .table-persistent-scroll-wrap {
+      background: #F4F8FD;
+      border: 1.5px solid var(--border-card);
+      border-top: 1px solid #D6E4F5;
+      border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+      padding: 14px 22px 16px 22px;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .scroll-helper-text {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--brand-blue-dark);
+      letter-spacing: -0.01em;
+    }
+
+    .scroll-helper-left {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .scroll-dot-blue {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--brand-blue);
+      display: inline-block;
+      box-shadow: 0 0 0 2px rgba(41, 87, 164, 0.2);
+    }
+
+    .table-custom-track {
+      width: 100%;
+      height: 14px;
+      background: #D9E7F7;
+      border-radius: 9999px;
+      position: relative;
+      cursor: pointer;
+      border: 1.5px solid #BACFE8;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+      user-select: none;
+    }
+
+    .table-custom-thumb {
+      height: 100%;
+      width: 45%;
+      background: linear-gradient(90deg, var(--brand-blue), #3E72C6);
+      border-radius: 9999px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      cursor: grab;
+      box-shadow: 0 2px 8px rgba(41, 87, 164, 0.45);
+      transition: background 0.2s ease;
+    }
+
+    .table-custom-thumb:active {
+      cursor: grabbing;
+      background: var(--brand-blue-dark);
+    }
+
+    .table-scroll-hint {
+      display: none; /* Substituído pelo controle permanente visível */
+    }
+
+    .comp-table {
+      width: 100%;
+      min-width: 680px;
+      border-collapse: collapse;
+    }
+
+    .comp-table {
+      width: 100%;
+      min-width: 660px;
+      border-collapse: collapse;
+    }
+
+    .comp-table th, .comp-table td {
+      padding: 20px 26px;
+      text-align: left;
+      font-size: 16px;
+      border-bottom: 1px solid var(--border-card);
+    }
+
+    .comp-table th {
+      font-weight: 800;
+      font-size: 17px;
+      background: #F8FAFD;
+      color: var(--text-main);
+    }
+
+    .comp-table th.col-ria {
+      background: var(--brand-blue);
+      color: #FFFFFF;
+      font-size: 18px;
+    }
+
+    .comp-table td.col-ria {
+      background: #F6FAFF;
+      font-weight: 700;
+      color: var(--brand-green);
+    }
+
+    .comp-table td.no {
+      color: var(--text-muted);
+    }
+
+    .comp-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .status-badge-no {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-muted);
+    }
+
+    .status-badge-yes {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--brand-green);
+      font-weight: 700;
+    }
+
+    /* ==========================================================================
+       SECTION: PARA QUEM É + IMAGEM DISCRETA
+       ========================================================================== */
+    .audience-wrapper {
+      margin-top: 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .audience-cards-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .audience-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 24px 28px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s ease;
+    }
+
+    .audience-card:hover {
+      transform: translateX(4px);
+      border-color: var(--brand-blue);
+      box-shadow: var(--shadow-md);
+    }
+
+    .audience-image-box {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border-card);
+      position: relative;
+      height: 100%;
+      min-height: 380px;
+    }
+
+    .audience-image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.96) saturate(1.05);
+    }
+
+    .audience-image-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 24px 28px;
+      background: linear-gradient(180deg, transparent 0%, rgba(13, 21, 37, 0.85) 100%);
+      color: #FFFFFF;
+    }
+
+    .audience-image-overlay p {
+      color: #E2E8F0;
+      font-size: 14.5px;
+      margin-top: 4px;
+    }
+
+    /* ==========================================================================
+       SECTION: PLANOS
+       ========================================================================== */
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+      margin-top: 52px;
+      align-items: stretch;
+    }
+
+    .card.plan {
+      display: flex;
+      flex-direction: column;
+      background: #FFFFFF;
+      position: relative;
+    }
+
+    .card.plan.feat {
+      border: 2px solid var(--brand-blue);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-6px);
+    }
+
+    
+    /* Pricing Box inside Plans */
+    .plan-pricing-box {
+      margin: 18px 0 12px 0;
+      padding: 14px 18px;
+      background: #F4F8FD;
+      border: 1px solid #D6E4F7;
+      border-radius: var(--radius-md);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .plan-pricing-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 14.5px;
+      color: var(--text-body);
+      font-weight: 500;
+    }
+
+    .plan-pricing-row.highlight {
+      font-size: 15px;
+      color: var(--brand-blue-dark);
+      font-weight: 700;
+      border-top: 1px dashed rgba(41, 87, 164, 0.25);
+      padding-top: 8px;
+      margin-top: 2px;
+    }
+
+    .plan-pricing-row .val-setup {
+      font-weight: 800;
+      color: var(--text-main);
+      font-size: 17px;
+    }
+
+    .plan-pricing-row .val {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--brand-blue);
+    }
+
+    .plan-pricing-row .period {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-left: 2px;
+    }
+
+    /* Token Information Box below Plans */
+    .plans-token-note {
+      margin-top: 36px;
+      padding: 22px 28px;
+      background: #FFFFFF;
+      border: 1.5px solid var(--border-card);
+      border-left: 5px solid var(--brand-blue);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .token-note-icon {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--brand-blue-light);
+      color: var(--brand-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .plans-token-note p {
+      color: var(--text-body);
+      font-size: 15px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .plans-token-note strong {
+      color: var(--brand-blue-dark);
+    }
+
+    .footer-contact {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-wa-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--brand-green);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      transition: color 0.2s ease;
+    }
+
+    .footer-wa-link:hover {
+      color: var(--brand-green-hover);
+      text-decoration: underline;
+    }
+
+    .plan-badge-featured {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--brand-blue);
+      color: #FFFFFF;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 5px 16px;
+      border-radius: var(--radius-pill);
+      box-shadow: 0 4px 10px rgba(41, 87, 164, 0.3);
+    }
+
+    ul.ck {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 32px 0;
+      flex-grow: 1;
+    }
+
+    ul.ck li {
+      padding-left: 28px;
+      position: relative;
+      margin-bottom: 14px;
+      color: var(--text-body);
+      font-size: 15.5px;
+      line-height: 1.5;
+    }
+
+    ul.ck li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%2338A149'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .plan .btn {
+      margin-top: auto;
+      width: 100%;
+    }
+
+    /* ==========================================================================
+       SECTION: FAQ (DÚVIDAS)
+       ========================================================================== */
+    .faq-container {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    details {
+      background: #FFFFFF;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 22px 28px;
+      transition: all 0.25s ease;
+      box-shadow: var(--shadow-sm);
+    }
+
+    details[open] {
+      border-color: var(--brand-blue-border);
+      box-shadow: var(--shadow-md);
+      background: #FCFDFF;
+    }
+
+    summary {
+      font-weight: 700;
+      font-size: 18px;
+      cursor: pointer;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+      user-select: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--brand-blue);
+      transition: transform 0.25s ease;
+      line-height: 1;
+    }
+
+    details[open] summary::after {
+      content: "−";
+      color: var(--brand-green);
+    }
+
+    details p {
+      color: var(--text-body);
+      margin-top: 14px;
+      max-width: 760px;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    /* ==========================================================================
+       SECTION: DARK FINAL CTA
+       ========================================================================== */
+    .dark-cta-card {
+      position: relative;
+      background: radial-gradient(circle at 50% 20%, rgba(41, 87, 164, 0.25) 0%, transparent 60%),
+                  radial-gradient(circle at 80% 80%, rgba(56, 161, 73, 0.15) 0%, transparent 50%),
+                  var(--bg-dark);
+      border-radius: var(--radius-lg);
+      padding: 72px 40px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .dark-cta-card h2 {
+      max-width: 820px;
+      margin: 0 auto 20px auto;
+    }
+
+    .dark-cta-card p.lead {
+      margin: 0 auto 36px auto;
+      max-width: 680px;
+    }
+
+    .btn-wa-large {
+      min-height: 56px;
+      padding: 0 38px;
+      font-size: 17px;
+      background-color: var(--brand-green);
+      color: #FFFFFF;
+      box-shadow: 0 8px 28px rgba(56, 161, 73, 0.45);
+    }
+
+    .btn-wa-large:hover {
+      background-color: var(--brand-green-hover);
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 32px rgba(56, 161, 73, 0.55);
+    }
+
+    /* ==========================================================================
+       FOOTER
+       ========================================================================== */
+    footer.site-footer {
+      background: #FFFFFF;
+      border-top: 1px solid var(--border-subtle);
+      padding: 40px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-size: 14.5px;
+      color: var(--text-muted);
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .footer-logo-link {
+      display: inline-flex;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      text-decoration: none;
+    }
+
+    .footer-logo-link:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    .footer-brand-info {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .footer-site-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--brand-blue);
+      text-decoration: none;
+      background: var(--brand-blue-light);
+      border: 1px solid var(--brand-blue-border);
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      width: fit-content;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 4px rgba(41, 87, 164, 0.08);
+    }
+
+    .footer-site-pill:hover {
+      background: var(--brand-blue);
+      color: #FFFFFF;
+      border-color: var(--brand-blue);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(41, 87, 164, 0.22);
+    }
+
+    .footer-brand img {
+      height: 34px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE ADAPTATIONS
+       ========================================================================== */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .audience-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .audience-image-box {
+        min-height: 280px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .sec {
+        padding: 64px 0;
+      }
+
+      h1 {
+        font-size: 36px;
+        line-height: 1.18;
+      }
+
+      h2 {
+        font-size: 28px;
+        line-height: 1.25;
+      }
+
+      .lead {
+        font-size: 16.5px;
+      }
+
+      /* Header compacto no celular */
+      .header-inner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      .brand-logo-img {
+        height: 36px;
+      }
+
+      .brand-product .product-name {
+        font-size: 17px;
+      }
+
+      .brand-product .product-tag {
+        font-size: 10px;
+      }
+
+      .nav-group {
+        width: auto;
+        margin-top: 0;
+        gap: 8px;
+      }
+
+      .nav-group a.nav {
+        display: none; /* Oculta links de navegação para dar respiro ao botão de ação */
+      }
+
+      .btn.btn-nav {
+        min-height: 35px;
+        padding: 0 13px;
+        font-size: 12.5px;
+        gap: 5px;
+      }
+
+      /* Seção O Problema: centralização perfeita da expressão matemática no celular */
+      .calc-card {
+        padding: 26px 18px;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+      }
+
+      .calc-card > div:first-child {
+        text-align: center;
+        width: 100%;
+      }
+
+      .calc-card h3 {
+        font-size: 19px;
+        margin-bottom: 6px;
+      }
+
+      .calc-card p {
+        font-size: 15px;
+      }
+
+      .calc-result-pill {
+        font-size: 17px;
+        padding: 11px 16px;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: normal;
+        box-shadow: 0 4px 14px rgba(194, 37, 92, 0.16);
+      }
+
+      .dark-cta-card {
+        padding: 50px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER: ANAUÊ DESIGN · RIA360°
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="c header-inner">
+      <div class="brand-wrap">
+        <img src="assets/logo-anaue.png" alt="Anauê Design Mkt & IA" class="brand-logo-img">
+        <span class="brand-separator"></span>
+        <div class="brand-product">
+          <strong class="product-name">RIA360°</strong>
+          <span class="product-tag">Recepcionista IA</span>
+        </div>
+      </div>
+      <nav class="nav-group">
+        <a class="nav" href="#como">Como funciona</a>
+        <a class="nav" href="#planos">Planos</a>
+        <a class="nav" href="#faq">Dúvidas</a>
+        <a class="btn wa btn-nav" href="https://wa.me/558599627777?text=Quero%20testar%20a%20recepcionista%20IA">
+          <!-- WhatsApp Icon -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 2C6.495 2 2 6.495 2 12.031c0 1.905.534 3.684 1.464 5.215L2 22l4.908-1.428a10.007 10.007 0 005.123 1.459c5.535 0 10.03-4.495 10.03-10.031C22.062 6.495 17.566 2 12.031 2zm5.828 14.186c-.244.686-1.42 1.32-1.956 1.385-.503.06-1.157.086-3.72-.976-3.08-1.277-5.074-4.41-5.228-4.615-.154-.205-1.246-1.658-1.246-3.161 0-1.503.784-2.245 1.062-2.552.278-.307.608-.384.811-.384.203 0 .406.002.585.011.188.01.442-.072.692.528.258.62.88 2.148.956 2.304.077.155.129.336.026.541-.103.205-.154.333-.308.513-.154.18-.327.4-.467.538-.154.153-.314.32-.135.626.179.307.798 1.317 1.71 2.13 1.173 1.045 2.163 1.368 2.47 1.522.307.154.488.128.667-.077.18-.205.77-897.974-1.205.205-.308.41-.257.692-.154.282.103 1.79.845 2.098.999.308.154.513.23.589.359.077.128.077.744-.167 1.43z"/>
+          </svg>
+          Testar no WhatsApp
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section class="sec hero-sec">
+    <div class="c hero-grid">
+      <!-- Coluna de Texto Persuasivo -->
+      <div class="hero-content">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          Para salões, barbearias e clínicas de estética
+        </div>
+        <h1>
+          Uma recepcionista que atende no WhatsApp 
+          <span class="font-serif">24 horas.</span>
+        </h1>
+        <p class="lead">
+          Seu agente de IA conversa com a cliente, escolhe o profissional, marca o horário, cobra o sinal por PIX e lembra antes do atendimento. Tudo aparece no seu painel.
+        </p>
+        
+        <div class="hero-actions">
+          <a class="btn wa" href="https://wa.me/558599627777?text=Quero%20testar%20a%20recepcionista%20IA">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.031 2C6.495 2 2 6.495 2 12.031c0 1.905.534 3.684 1.464 5.215L2 22l4.908-1.428a10.007 10.007 0 005.123 1.459c5.535 0 10.03-4.495 10.03-10.031C22.062 6.495 17.566 2 12.031 2zm5.828 14.186c-.244.686-1.42 1.32-1.956 1.385-.503.06-1.157.086-3.72-.976-3.08-1.277-5.074-4.41-5.228-4.615-.154-.205-1.246-1.658-1.246-3.161 0-1.503.784-2.245 1.062-2.552.278-.307.608-.384.811-.384.203 0 .406.002.585.011.188.01.442-.072.692.528.258.62.88 2.148.956 2.304.077.155.129.336.026.541-.103.205-.154.333-.308.513-.154.18-.327.4-.467.538-.154.153-.314.32-.135.626.179.307.798 1.317 1.71 2.13 1.173 1.045 2.163 1.368 2.47 1.522.307.154.488.128.667-.077.18-.205.77-897.974-1.205.205-.308.41-.257.692-.154.282.103 1.79.845 2.098.999.308.154.513.23.589.359.077.128.077.744-.167 1.43z"/>
+            </svg>
+            Conversar com a recepcionista agora
+          </a>
+          <a class="btn ghost" href="#como">Ver como funciona</a>
+        </div>
+
+        <div class="hero-badge-trust">
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <p>Plataforma individual, com a marca e as regras do seu salão.</p>
+        </div>
+      </div>
+
+      <!-- Coluna Visual com Imagem Discreta do Salão + Simulação WhatsApp -->
+      <div class="hero-visual-card">
+        <!-- Foto sutil de recepção de estética e salão -->
+        <div class="hero-photo-bg">
+          <img src="assets/hero_salon_aesthetic.jpg" alt="Recepção de Salão e Clínica de Estética de Alto Padrão">
+          <div class="hero-photo-overlay">
+            <div class="hero-photo-caption">
+              <span>Tecnologia Anauê</span> Atendimento humanizado no WhatsApp
+            </div>
+          </div>
+        </div>
+
+        <!-- Chat Container WhatsApp -->
+        <div class="chat-preview">
+          <div class="chat-header">
+            <div class="chat-user-info">
+              <div class="chat-avatar">R</div>
+              <div>
+                <div class="chat-user-name">RIA360° · Salão & Estética</div>
+                <div class="chat-user-status">● Online agora no WhatsApp</div>
+              </div>
+            </div>
+            <div class="chat-time">WhatsApp · 22h14</div>
+          </div>
+
+          <div class="bub me">Oi! Tem horário pra escova no sábado?</div>
+          <div class="bub ai">Oi, Camila! Tenho sábado às 10h com a Rafa e às 14h com a Duda. Qual prefere?</div>
+          <div class="bub me">10h com a Rafa</div>
+          <div class="bub ai">Perfeito. Para confirmar, envio o PIX do sinal. Assim que cair, seu horário fica reservado.</div>
+          <div class="bub ai success"><strong>Pagamento recebido.</strong> Escova com a Rafa, sábado às 10h. Te aviso um dia antes!</div>
+
+          <div class="floating-live-badge">
+            <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            Horário travado na agenda · Sinal pago por PIX
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: O PROBLEMA
+       ========================================================================== -->
+  <section class="sec alt">
+    <div class="c">
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        O problema
+      </div>
+      <h2>
+        Cada mensagem sem resposta é um horário 
+        <span class="font-serif">que vai para o concorrente.</span>
+      </h2>
+      <p class="lead">A recepção para quando a equipe está atendendo. O WhatsApp não para.</p>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card-icon-wrap">
+            <!-- Moon / Night icon -->
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+            </svg>
+          </div>
+          <h3>Mensagens à noite e no domingo</h3>
+          <p>É quando muita cliente decide marcar. Se ninguém responde, ela procura outro salão.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon-wrap">
+            <!-- Calendar Alert icon -->
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3>Faltas e horários vazios</h3>
+          <p>Sem lembrete e sem sinal, a cliente esquece, e a cadeira fica parada.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon-wrap">
+            <!-- Mobile Interrupt icon -->
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3>Equipe presa no celular</h3>
+          <p>Quem deveria atender responde mensagem entre uma cliente e outra.</p>
+        </div>
+      </div>
+
+      <!-- Calculadora de Perdas Visualmente Confortável -->
+      <div class="calc-card">
+        <div>
+          <h3>A conta simples (exemplo ilustrativo)</h3>
+          <p>agendamentos por mês × % de faltas × ticket médio = quanto você perde por mês.</p>
+        </div>
+        <div class="calc-result-pill">
+          300 × 15% × R$ 80 = R$ 3.600
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: COMO FUNCIONA
+       ========================================================================== -->
+  <section class="sec" id="como">
+    <div class="c">
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        Como funciona
+      </div>
+      <h2>
+        Da primeira mensagem ao horário confirmado, 
+        <span class="font-serif">sem ninguém da equipe.</span>
+      </h2>
+
+      <div class="step-grid">
+        <div class="step">
+          <div class="num">1</div>
+          <h3>A cliente chama</h3>
+          <p>Pelo WhatsApp do salão, a qualquer hora.</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h3>O agente atende</h3>
+          <p>Entende o serviço, mostra horários livres e deixa a cliente escolher o profissional.</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h3>O sinal confirma</h3>
+          <p>PIX ou cartão online. O horário só trava quando o pagamento cai.</p>
+        </div>
+        <div class="step">
+          <div class="num">4</div>
+          <h3>Você acompanha</h3>
+          <p>Agenda, clientes e pagamentos atualizados no painel administrativo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: O QUE VOCÊ LEVA
+       ========================================================================== -->
+  <section class="sec alt">
+    <div class="c">
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        O que você leva
+      </div>
+      <h2>
+        Atendimento, agenda, pagamento e gestão 
+        <span class="font-serif">em um só lugar.</span>
+      </h2>
+
+      <div class="grid">
+        <div class="feat-card">
+          <div class="feat-icon-wrap">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3>Agenda por profissional</h3>
+          <p>Cada profissional com seus serviços, horários e duração. Sem conflito de horário.</p>
+        </div>
+
+        <div class="feat-card">
+          <div class="feat-icon-wrap">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+            </svg>
+          </div>
+          <h3>Pagamento online</h3>
+          <p>Sinal ou valor total por PIX, boleto ou cartão, direto na conta do seu salão.</p>
+        </div>
+
+        <div class="feat-card">
+          <div class="feat-icon-wrap">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+            </svg>
+          </div>
+          <h3>Lembretes automáticos</h3>
+          <p>A cliente é avisada antes do horário, o que ajuda a reduzir faltas.</p>
+        </div>
+
+        <div class="feat-card">
+          <div class="feat-icon-wrap">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3>Painel administrativo completo</h3>
+          <p>Equipe, serviços, agenda e financeiro, em uma página web simples de usar.</p>
+        </div>
+
+        <div class="feat-card">
+          <div class="feat-icon-wrap">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+            </svg>
+          </div>
+          <h3>Com a cara do seu salão</h3>
+          <p>Tom de voz, regras, serviços e fluxo de atendimento ajustados ao seu negócio.</p>
+        </div>
+
+        <div class="feat-card">
+          <div class="feat-icon-wrap">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3>Canal com contingência</h3>
+          <p>Conexão oficial da Meta, com um segundo caminho caso o principal falhe.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: POR QUE NÃO SÓ UMA AGENDA? (TABELA COMPARATIVA)
+       ========================================================================== -->
+  <section class="sec">
+    <div class="c">
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        Por que não só uma agenda?
+      </div>
+      <h2>
+        Agenda comum espera a cliente. 
+        <span class="font-serif">A recepcionista IA vai até ela.</span>
+      </h2>
+
+      <div class="table-container">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>O que você precisa</th>
+              <th>Agenda comum</th>
+              <th class="col-ria">Recepcionista IA (RIA360°)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Responde a cliente no WhatsApp</strong></td>
+              <td class="no">
+                <span class="status-badge-no">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                  </svg>
+                  Você ou a equipe
+                </span>
+              </td>
+              <td class="col-ria">
+                <span class="status-badge-yes">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  Automático, 24h
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Oferece horários e profissionais</strong></td>
+              <td class="no">
+                <span class="status-badge-no">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                  </svg>
+                  Cliente precisa abrir um link
+                </span>
+              </td>
+              <td class="col-ria">
+                <span class="status-badge-yes">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  Na própria conversa
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Cobra o sinal</strong></td>
+              <td class="no">
+                <span class="status-badge-no">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                  </svg>
+                  Depende da ferramenta
+                </span>
+              </td>
+              <td class="col-ria">
+                <span class="status-badge-yes">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  PIX ou cartão na conversa
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Adaptada ao seu salão</strong></td>
+              <td class="no">
+                <span class="status-badge-no">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                  </svg>
+                  Modelo padrão
+                </span>
+              </td>
+              <td class="col-ria">
+                <span class="status-badge-yes">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  Individual e personalizável
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Barra de Rolagem Azul Permanente (Sempre Visível mesmo em descanso) -->
+      <div class="table-persistent-scroll-wrap">
+        <div class="scroll-helper-text">
+          <div class="scroll-helper-left">
+            <span class="scroll-dot-blue"></span>
+            <span>Barra de navegação da tabela</span>
+          </div>
+          <span style="font-size: 12px; color: var(--text-muted); font-weight: 500;">Arraste ou deslize para ver tudo</span>
+        </div>
+        <div class="table-custom-track" id="tableCustomTrack" title="Arraste ou clique para navegar na tabela">
+          <div class="table-custom-thumb" id="tableCustomThumb"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: PARA QUEM É + FOTO DISCRETA DE CLÍNICA
+       ========================================================================== -->
+  <section class="sec alt">
+    <div class="c">
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        Para quem é
+      </div>
+      <h2>
+        Feita para quem vive de 
+        <span class="font-serif">agenda cheia.</span>
+      </h2>
+
+      <div class="audience-wrapper">
+        <div class="audience-cards-stack">
+          <div class="audience-card">
+            <h3>Salões de beleza</h3>
+            <p>De 1 a 3 profissionais ou equipes maiores, com vários serviços e preços.</p>
+          </div>
+
+          <div class="audience-card">
+            <h3>Barbearias</h3>
+            <p>Atendimento rápido, horários curtos e alta recorrência de clientes.</p>
+          </div>
+
+          <div class="audience-card">
+            <h3>Clínicas de estética</h3>
+            <p>Procedimentos mais longos, em que faltar custa caro e o sinal faz diferença.</p>
+          </div>
+        </div>
+
+        <!-- Imagem Discreta de Procedimento / Estética -->
+        <div class="audience-image-box">
+          <img src="assets/aesthetic_clinic_treatment.jpg" alt="Profissional de Estética e Tratamentos de Alta Precisão">
+          <div class="audience-image-overlay">
+            <strong>Experiência sem atrito para seus clientes</strong>
+            <p>Agendamento rápido que valoriza o tempo da sua equipe e a pontualidade dos procedimentos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: PLANOS
+       ========================================================================== -->
+  <section class="sec" id="planos">
+    <div class="c">
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        Planos
+      </div>
+      <h2>
+        Escolha pelo tamanho 
+        <span class="font-serif">da sua equipe.</span>
+      </h2>
+      <p class="lead">Implantação e mensalidade sob medida. Peça uma proposta e receba valores para o seu caso.</p>
+
+      <div class="plans-grid">
+        <!-- Plano Essencial -->
+        <div class="card plan">
+          <h3>Essencial</h3>
+          <p>Para 1 a 3 profissionais.</p>
+          
+          <div class="plan-pricing-box">
+            <div class="plan-pricing-row">
+              <span>Setup:</span>
+              <span class="val-setup">R$ 700</span>
+            </div>
+            <div class="plan-pricing-row highlight">
+              <span>Mensal:</span>
+              <span class="val">R$ 197<span class="period">/mês</span></span>
+            </div>
+          </div>
+
+          <ul class="ck">
+            <li>Agente de IA no WhatsApp</li>
+            <li>Agenda por profissional</li>
+            <li>Pagamento online</li>
+            <li>Painel administrativo</li>
+          </ul>
+          <a class="btn ghost" href="https://wa.me/558599627777?text=Quero%20proposta%20do%20plano%20Essencial">Pedir proposta</a>
+        </div>
+
+        <!-- Plano Profissional (Destaque) -->
+        <div class="card plan feat">
+          <span class="plan-badge-featured">Mais Escolhido</span>
+          <h3>Profissional</h3>
+          <p>Para 4 a 8 profissionais ou clínicas.</p>
+          <ul class="ck">
+            <li>Agente de IA no WhatsApp</li>
+            <li>Agenda por profissional</li>
+            <li>Pagamento online</li>
+            <li>Painel administrativo</li>
+            <li>Lembrete via Whatsapp</li>
+          </ul>
+          <a class="btn wa" href="https://wa.me/558599627777?text=Quero%20proposta%20do%20plano%20Profissional">Pedir proposta</a>
+        </div>
+
+        <!-- Plano Sob Medida -->
+        <div class="card plan">
+          <h3>Sob medida</h3>
+          <p>Várias unidades ou necessidades próprias.</p>
+          <ul class="ck">
+            <li>Projeto individual</li>
+            <li>Integrações e módulos extras</li>
+            <li>Identidade e tom de voz exclusivos</li>
+          </ul>
+          <a class="btn ghost" href="https://wa.me/558599627777?text=Quero%20conversar%20sobre%20um%20projeto%20sob%20medida">Falar comigo</a>
+        </div>
+      </div>
+
+      <!-- Informação sobre consumo de tokens de IA abaixo dos planos -->
+      <div class="plans-token-note">
+        <div class="token-note-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <p>
+          Há uma média previsível para consumo de tokens de IA/cliente, para o plano Essencial é free, para os outros planos será feito um cálculo previsível para obter uma média de valor para compor na proposta.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: FAQ (DÚVIDAS)
+       ========================================================================== -->
+  <section class="sec alt" id="faq">
+    <div class="c" style="max-width: 900px;">
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        Dúvidas
+      </div>
+      <h2>
+        O que os donos de salão 
+        <span class="font-serif">mais perguntam.</span>
+      </h2>
+
+      <div class="faq-container">
+        <details>
+          <summary>A IA substitui a minha equipe?</summary>
+          <p>Não. Ela cuida das mensagens e do agendamento, e sua equipe fica livre para atender quem está na cadeira.</p>
+        </details>
+        <details>
+          <summary>Posso personalizar serviços, preços e tom de voz?</summary>
+          <p>Sim. A plataforma é individual: configuramos serviços, profissionais, regras e a forma de falar do seu salão.</p>
+        </details>
+        <details>
+          <summary>Como recebo os pagamentos?</summary>
+          <p>Os pagamentos online caem direto na conta do seu salão. Eu não fico com o seu dinheiro.</p>
+        </details>
+        <details>
+          <summary>Funciona para clínica de estética?</summary>
+          <p>Sim, inclusive com sinal para procedimentos mais longos.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: CTA FINAL ESCURO
+       ========================================================================== -->
+  <section class="sec dark">
+    <div class="c">
+      <div class="dark-cta-card">
+        <h2>
+          Teste agora: mande uma mensagem e 
+          <span class="font-serif">veja o agendamento acontecer.</span>
+        </h2>
+        <p class="lead">
+          Converse com a recepcionista IA como se fosse uma cliente. Em poucos minutos você entende o que ela faz pelo seu salão.
+        </p>
+        <a class="btn btn-wa-large" href="https://wa.me/558599627777?text=Quero%20testar%20a%20recepcionista%20IA">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 2C6.495 2 2 6.495 2 12.031c0 1.905.534 3.684 1.464 5.215L2 22l4.908-1.428a10.007 10.007 0 005.123 1.459c5.535 0 10.03-4.495 10.03-10.031C22.062 6.495 17.566 2 12.031 2zm5.828 14.186c-.244.686-1.42 1.32-1.956 1.385-.503.06-1.157.086-3.72-.976-3.08-1.277-5.074-4.41-5.228-4.615-.154-.205-1.246-1.658-1.246-3.161 0-1.503.784-2.245 1.062-2.552.278-.307.608-.384.811-.384.203 0 .406.002.585.011.188.01.442-.072.692.528.258.62.88 2.148.956 2.304.077.155.129.336.026.541-.103.205-.154.333-.308.513-.154.18-.327.4-.467.538-.154.153-.314.32-.135.626.179.307.798 1.317 1.71 2.13 1.173 1.045 2.163 1.368 2.47 1.522.307.154.488.128.667-.077.18-.205.77-897.974-1.205.205-.308.41-.257.692-.154.282.103 1.79.845 2.098.999.308.154.513.23.589.359.077.128.077.744-.167 1.43z"/>
+          </svg>
+          Quero testar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="c footer-inner">
+      <div class="footer-brand">
+        <a href="https://anauedesign.com.br" target="_blank" rel="noopener" class="footer-logo-link" title="Visitar site oficial da Anauê Design">
+          <img src="assets/logo-anaue.png" alt="Anauê Design Mkt & IA">
+        </a>
+        <div class="footer-brand-info">
+          <span>Anaue Design · Fortaleza, CE</span>
+          <a href="https://anauedesign.com.br" target="_blank" rel="noopener" class="footer-site-pill">
+            <span>anauedesign.com.br</span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <a href="https://wa.me/558599627777" class="footer-wa-link" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 2C6.495 2 2 6.495 2 12.031c0 1.905.534 3.684 1.464 5.215L2 22l4.908-1.428a10.007 10.007 0 005.123 1.459c5.535 0 10.03-4.495 10.03-10.031C22.062 6.495 17.566 2 12.031 2zm5.828 14.186c-.244.686-1.42 1.32-1.956 1.385-.503.06-1.157.086-3.72-.976-3.08-1.277-5.074-4.41-5.228-4.615-.154-.205-1.246-1.658-1.246-3.161 0-1.503.784-2.245 1.062-2.552.278-.307.608-.384.811-.384.203 0 .406.002.585.011.188.01.442-.072.692.528.258.62.88 2.148.956 2.304.077.155.129.336.026.541-.103.205-.154.333-.308.513-.154.18-.327.4-.467.538-.154.153-.314.32-.135.626.179.307.798 1.317 1.71 2.13 1.173 1.045 2.163 1.368 2.47 1.522.307.154.488.128.667-.077.18-.205.77-897.974-1.205.205-.308.41-.257.692-.154.282.103 1.79.845 2.098.999.308.154.513.23.589.359.077.128.077.744-.167 1.43z"/>
+          </svg>
+          (85) 99627-7777
+        </a>
+        <span>RIA360° · Recepcionista IA para salões e clínicas de estética</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Sincronização da barra de rolagem permanente -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const container = document.querySelector('.table-container');
+      const track = document.getElementById('tableCustomTrack');
+      const thumb = document.getElementById('tableCustomThumb');
+      if (!container || !track || !thumb) return;
+
+      function updateThumb() {
+        const maxScroll = container.scrollWidth - container.clientWidth;
+        if (maxScroll <= 0) {
+          thumb.style.width = '100%';
+          thumb.style.left = '0%';
+          return;
+        }
+        const visibleRatio = container.clientWidth / container.scrollWidth;
+        const thumbWidthPercent = Math.max(25, visibleRatio * 100);
+        const scrollRatio = container.scrollLeft / maxScroll;
+        const leftPercent = scrollRatio * (100 - thumbWidthPercent);
+
+        thumb.style.width = thumbWidthPercent + '%';
+        thumb.style.left = leftPercent + '%';
+      }
+
+      container.addEventListener('scroll', updateThumb, { passive: true });
+      window.addEventListener('resize', updateThumb);
+      setTimeout(updateThumb, 50);
+
+      // Permite clicar no trilho para rolar
+      track.addEventListener('click', function(e) {
+        const rect = track.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const ratio = Math.max(0, Math.min(1, clickX / rect.width));
+        const maxScroll = container.scrollWidth - container.clientWidth;
+        container.scrollTo({ left: ratio * maxScroll, behavior: 'smooth' });
+      });
+
+      // Permite arrastar o indicador azul
+      let isDragging = false;
+      let startX = 0;
+      let startScroll = 0;
+
+      thumb.addEventListener('mousedown', function(e) {
+        isDragging = true;
+        startX = e.clientX;
+        startScroll = container.scrollLeft;
+        e.preventDefault();
+      });
+
+      window.addEventListener('mousemove', function(e) {
+        if (!isDragging) return;
+        const dx = e.clientX - startX;
+        const maxScroll = container.scrollWidth - container.clientWidth;
+        const trackWidth = track.clientWidth;
+        const scrollDelta = (dx / trackWidth) * container.scrollWidth;
+        container.scrollLeft = startScroll + scrollDelta;
+      });
+
+      window.addEventListener('mouseup', function() {
+        isDragging = false;
+      });
+
+      // Suporte para touch no indicador
+      thumb.addEventListener('touchstart', function(e) {
+        if (e.touches.length === 1) {
+          isDragging = true;
+          startX = e.touches[0].clientX;
+          startScroll = container.scrollLeft;
+        }
+      }, { passive: true });
+
+      window.addEventListener('touchmove', function(e) {
+        if (!isDragging || e.touches.length !== 1) return;
+        const dx = e.touches[0].clientX - startX;
+        const trackWidth = track.clientWidth;
+        const scrollDelta = (dx / trackWidth) * container.scrollWidth;
+        container.scrollLeft = startScroll + scrollDelta;
+      }, { passive: true });
+
+      window.addEventListener('touchend', function() {
+        isDragging = false;
+      });
+    });
+  </script>
+
+</body>
+</html>

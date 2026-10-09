@@ -66,9 +66,12 @@ function createPreviewServer(port) {
         return res.end('403 Forbidden: Acesso não autorizado.');
       }
 
-      // Se não encontrou o arquivo direto, tenta adicionar .html (ex: /quem-somos -> /quem-somos.html)
+      // Se não encontrou o arquivo direto, tenta index.html (ex: /ria360/ -> /ria360/index.html) ou .html (ex: /quem-somos -> /quem-somos.html)
       if (!fs.existsSync(filePath) || !fs.statSync(filePath).isFile()) {
-        if (fs.existsSync(filePath + '.html') && fs.statSync(filePath + '.html').isFile()) {
+        const indexPath = path.join(filePath, 'index.html');
+        if (fs.existsSync(indexPath) && fs.statSync(indexPath).isFile()) {
+          filePath = indexPath;
+        } else if (fs.existsSync(filePath + '.html') && fs.statSync(filePath + '.html').isFile()) {
           filePath = filePath + '.html';
         }
       }

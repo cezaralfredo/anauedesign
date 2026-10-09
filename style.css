@@ -333,6 +333,9 @@ a{color:inherit;text-decoration:none}
 .qs-hist__title{font-size:clamp(1.75rem,3.5vw,2.5rem);font-weight:800;color:var(--ink);line-height:1.15;margin-bottom:1.5rem;letter-spacing:-.02em}
 .qs-hist__title .hl{font-family:'Meow Script',cursive;font-size:1.3em;font-weight:400;background:linear-gradient(120deg,#a8d4ff 0%,var(--green) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;padding:.1em .15em .25em;display:inline-block;line-height:1;overflow:visible}
 .qs-hist__text p{color:var(--ink-2);font-size:1.0625rem;line-height:1.7;margin-bottom:1rem}
+.qs-hist__media{position:relative;display:flex;justify-content:center;align-items:center}
+.qs-hist__img{width:100%;max-width:480px;aspect-ratio:1/1;object-fit:cover;border-radius:var(--r-xl);box-shadow:var(--shadow-lg);border:1px solid var(--line);transition:transform var(--t),box-shadow var(--t)}
+.qs-hist__img:hover{transform:translateY(-4px);box-shadow:0 24px 48px rgba(15,23,42,.16),0 10px 20px rgba(15,23,42,.08)}
 .qs-hist__stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
 .qs-hist__stat{padding:1.5rem;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);text-align:center}
 .qs-hist__stat-num{display:block;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:800;background:linear-gradient(135deg,var(--blue) 0%,var(--green) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1;margin-bottom:.375rem}
