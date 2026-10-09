@@ -1,90 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Home -->
   <url>
     <loc>https://anauedesign.com.br/</loc>
     <lastmod>2026-10-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
   </url>
+
+  <!-- Servicos -->
   <url>
     <loc>https://anauedesign.com.br/marketing-digital.html</loc>
     <lastmod>2026-10-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://anauedesign.com.br/criacao-de-sites.html</loc>
     <lastmod>2026-10-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://anauedesign.com.br/inteligencia-artificial.html</loc>
     <lastmod>2026-10-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://anauedesign.com.br/seo.html</loc>
     <lastmod>2026-10-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://anauedesign.com.br/hospedagem.html</loc>
     <lastmod>2026-10-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://anauedesign.com.br/customizacao-moodle.html</loc>
     <lastmod>2026-10-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://anauedesign.com.br/blog.html</loc>
-    <lastmod>2026-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://anauedesign.com.br/quem-somos.html</loc>
-    <lastmod>2026-10-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://anauedesign.com.br/politica-de-privacidade.html</loc>
-    <lastmod>2026-10-02</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://anauedesign.com.br/blog/pwa-alta-conversao-2026.html</loc>
-    <lastmod>2026-10-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://anauedesign.com.br/blog/geo-generative-engine-optimization-2026.html</loc>
-    <lastmod>2026-10-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+
+  <!-- RIA360: manter somente apos corrigir o loop de redirecionamento
+       e usar aqui exatamente a URL canonica final (com ou sem barra) -->
   <url>
     <loc>https://anauedesign.com.br/ria360/</loc>
     <lastmod>2026-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://anauedesign.com.br/blog.html</loc>
+    <lastmod>2026-10-09</lastmod>
   </url>
   <url>
     <loc>https://anauedesign.com.br/blog/agentes-autonomos-ia-whatsapp.html</loc>
     <lastmod>2026-10-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://anauedesign.com.br/blog/pwa-alta-conversao-2026.html</loc>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://anauedesign.com.br/blog/geo-generative-engine-optimization-2026.html</loc>
+    <lastmod>2026-10-02</lastmod>
+  </url>
+
+  <!-- Institucional -->
+  <url>
+    <loc>https://anauedesign.com.br/quem-somos.html</loc>
+    <lastmod>2026-10-02</lastmod>
+  </url>
+  <url>
+    <loc>https://anauedesign.com.br/politica-de-privacidade.html</loc>
+    <lastmod>2026-10-02</lastmod>
   </url>
 </urlset>
