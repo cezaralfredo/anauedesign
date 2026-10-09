@@ -1,118 +1,29 @@
-# ============================================================
-# Anauê Design · robots.txt
-# Estratégia: GEO (Generative Engine Optimization) e SEO Global
-# Permitir todos os crawlers de busca tradicionais e bots de IA
-# ============================================================
+# Anaue Design - robots.txt
+# Estrategia: GEO e SEO. Todos os crawlers liberados.
 
-# ---------- Padrão Universal (Garante acesso irrestrito) ----------
 User-agent: *
 Allow: /
 
-# ---------- Ferramentas de Auditoria & SEO Técnico ----------
-User-agent: AhrefsBot
-Allow: /
-
+# Ferramentas de auditoria
 User-agent: AhrefsSiteAudit
-Allow: /
-
+User-agent: AhrefsBot
 User-agent: SemrushBot
 Allow: /
 
-User-agent: Rogerbot
-Allow: /
-
-User-agent: DotBot
-Allow: /
-
-# ---------- Crawlers de Busca Tradicionais ----------
-User-agent: Googlebot
-Allow: /
-
-User-agent: Googlebot-Image
-Allow: /
-
-User-agent: Googlebot-Mobile
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
-User-agent: Baiduspider
-Allow: /
-
-User-agent: YandexBot
-Allow: /
-
-# ---------- Motores de Inteligência Artificial & LLMs ----------
-# OpenAI
+# Bots de IA
 User-agent: GPTBot
-Allow: /
-
 User-agent: OAI-SearchBot
-Allow: /
-
 User-agent: ChatGPT-User
-Allow: /
-
-# Anthropic (Claude)
 User-agent: ClaudeBot
-Allow: /
-
 User-agent: Claude-SearchBot
-Allow: /
-
 User-agent: Claude-User
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-# Google Gemini / DeepMind
-User-agent: Google-Extended
-Allow: /
-
-# Perplexity AI
 User-agent: PerplexityBot
-Allow: /
-
-# Meta AI (Llama)
-User-agent: FacebookBot
-Allow: /
-
-User-agent: meta-externalagent
-Allow: /
-
-# Apple Intelligence
-User-agent: Applebot
-Allow: /
-
+User-agent: Perplexity-User
+User-agent: Google-Extended
 User-agent: Applebot-Extended
+User-agent: Amazonbot
+User-agent: meta-externalagent
+User-agent: CCBot
 Allow: /
 
-# Amazon Alexa / AWS
-User-agent: ia_archiver
-Allow: /
-
-# ByteDance / TikTok
-User-agent: Bytespider
-Allow: /
-
-# Cohere AI
-User-agent: cohere-ai
-Allow: /
-
-# Buscadores de IA Emergentes
-User-agent: YouBot
-Allow: /
-
-User-agent: Diffbot
-Allow: /
-
-# ---------- Sitemaps & Índices Estruturados ----------
 Sitemap: https://anauedesign.com.br/sitemap.xml
