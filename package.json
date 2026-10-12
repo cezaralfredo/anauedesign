@@ -5,6 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "minify:css": "npx clean-css-cli -o style.min.css style.css",
+    "minify:js": "npx terser script.js -c -m -o script.min.js",
+    "build": "npm run minify:css && npm run minify:js"
   }
 }

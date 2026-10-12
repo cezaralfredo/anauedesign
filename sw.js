@@ -7,8 +7,8 @@ const CACHE_NAME = 'anaue-cache-v12';
 const PRECACHE_ASSETS = [
   '/',
   '/index.html',
-  '/style.css?v=48',
-  '/script.js?v=48',
+  '/style.min.css?v=48',
+  '/script.min.js?v=48',
   '/manifest.json',
   '/favicon.ico',
   '/assets/images/logo-anaue-design-marketing-ia-negativo.png',

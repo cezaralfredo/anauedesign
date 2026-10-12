@@ -13,6 +13,11 @@ DirectoryIndex index.html index.php
     RewriteCond %{HTTP_HOST} ^www\.anauedesign\.com\.br$ [NC]
     RewriteRule ^(.*)$ https://anauedesign.com.br/$1 [L,R=301]
 
+    # Forçar barra final em diretórios físicos com HTTPS e non-www (evita que o mod_dir redirecione para http://)
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteCond %{REQUEST_URI} !/$
+    RewriteRule ^(.*)$ https://anauedesign.com.br/$1/ [R=301,L]
+
     # Forçar HTTPS
     RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
     RewriteCond %{HTTP:X-Forwarded-SSL} !on [NC]
