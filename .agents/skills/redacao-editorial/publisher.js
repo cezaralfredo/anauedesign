@@ -55,4 +55,22 @@ function publishPostToBlog({ slug, title, description, category, dateFormatted, 
   }
 }
 
-module.exports = { publishPostToBlog };
+function commitAndPushPost({ slug, title }) {
+  const { execSync } = require('child_process');
+  try {
+    console.log(`[GIT] Adicionando arquivos da matéria ${slug}...`);
+    execSync('git add blog/ assets/images/blog/ blog.html sitemap.xml .agents/', { cwd: ROOT_DIR, stdio: 'inherit' });
+    
+    const commitMsg = `feat(editorial): publicar materia ${slug}`;
+    console.log(`[GIT] Executando commit: "${commitMsg}"...`);
+    execSync(`git commit -m "${commitMsg}"`, { cwd: ROOT_DIR, stdio: 'inherit' });
+
+    console.log(`[GIT] Executando git push origin main...`);
+    execSync('git push origin main', { cwd: ROOT_DIR, stdio: 'inherit' });
+    console.log(`[OK] Deploy e push concluídos com sucesso!`);
+  } catch (err) {
+    console.error(`[ERRO GIT] Falha durante commit/push:`, err.message);
+  }
+}
+
+module.exports = { publishPostToBlog, commitAndPushPost };

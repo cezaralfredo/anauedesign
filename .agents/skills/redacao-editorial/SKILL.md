@@ -102,8 +102,16 @@ Todo artigo gerado deve conter:
 
 ---
 
-## 7. Publicação Técnica
+## 7. Publicação Técnica & Deploy Contínuo (Git Automático)
 1. Criar o arquivo HTML individual em `blog/<slug-do-artigo>.html` seguindo o template responsivo da Anauê.
 2. Inserir Schema `NewsArticle` ou `BlogPosting` completo com autor, data, publisher e imagem.
 3. Atualizar o grid de artigos no `blog.html` adicionando o novo card no topo com a respectiva tag de categoria.
 4. Adicionar a nova URL no `sitemap.xml` com `<lastmod>` atualizado.
+5. **Commit e Push Automáticos (Obrigatório):** Ao concluir a criação, validação do HTML e registro em `blog.html` e `sitemap.xml`, o agente DEVE executar automaticamente o commit e o push das alterações para o repositório remoto no Git:
+   ```bash
+   git add blog/<slug>.html assets/images/blog/<slug>.* blog.html sitemap.xml
+   git commit -m "feat(editorial): publicar materia <slug>"
+   git push origin main
+   ```
+   *Essa etapa garante a entrega contínua e a publicação imediata da matéria em produção sem depender de intervenções manuais.*
+
