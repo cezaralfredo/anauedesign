@@ -71,18 +71,19 @@ Antes de escrever qualquer linha, o agente DEVE pesquisar e apurar dados factuai
 
 ## 5. Estrutura Padrão do Artigo (Padrão E-E-A-T e Schema.org)
 Todo artigo gerado deve conter:
-1. **Título Jornalístico Forte e Atemporal (Evergreen):** Chamativo, informativo, focado na dor ou oportunidade do cliente e na intenção de busca orgânica.
+1. **Título Jornalístico Forte e Atemporal (Evergreen):** Chamativo, informativo, focado na dor ou oportunidade do cliente e na intenção de busca orgânica (ideal entre 50 e 65 caracteres para não truncar na SERP).
    - **REGRA CRÍTICA DE ATEMPORALIDADE:** **NÃO use anos (ex: "2026", "em 2026") no título (H1, `<title>`, Open Graph), na URL/slug ou nas chamadas.** Os conteúdos devem ser perenes (evergreen), mantendo relevância contínua sem parecerem datados ou obsoletos com o passar do tempo. Exemplos:
      * *Em vez de:* "Por Que Empresas Estão Trocando Apps Nativos por PWAs em 2026?"
      * *Use:* "Por Que Empresas Estão Trocando Apps Nativos por PWAs? Guia de Performance e Conversão"
      * *Em vez de:* "GEO: O Guia Definitivo para 2026"
      * *Use:* "GEO (Generative Engine Optimization): O Guia Definitivo para Posicionamento em IAs"
-2. **Lead / Gancho Editorial:** Os primeiros dois parágrafos devem contextualizar o problema com urgência e relevância de mercado.
-3. **Corpo do Texto (1.200 a 2.000 palavras):**
-   - Intertítulos H2 e H3 bem estruturados.
+2. **Meta Description de Alta Conversão:** Entre 140 e 160 caracteres, contendo a palavra-chave principal e uma proposta de valor clara para atrair cliques orgânicos (CTR).
+3. **Lead / Gancho Editorial:** Os primeiros dois parágrafos devem contextualizar o problema com urgência e relevância de mercado.
+4. **Corpo do Texto (1.200 a 2.000 palavras):**
+   - Intertítulos H2 e H3 bem estruturados hierarquicamente.
    - Boxes de destaque com dicas práticas (`> [!TIP]`, `> [!NOTE]`).
    - Tabela comparativa ou resumo visual quando aplicável.
-4. **Internal Linking Estratégico:** Citar de forma natural e linkar para as páginas de serviços e institucionais da Anauê:
+5. **Internal Linking Estratégico:** Citar de forma natural e linkar para as páginas de serviços e institucionais da Anauê:
    - `/criacao-de-sites.html`
    - `/marketing-digital.html`
    - `/seo.html`
@@ -90,28 +91,78 @@ Todo artigo gerado deve conter:
    - `/customizacao-moodle.html`
    - `/hospedagem.html`
    - `/quem-somos.html`
-5. **FAQ Estruturado:** Mínimo de 3 perguntas e respostas frequentes no final.
-6. **Chamada para Ação (CTA):** Botão direto para o WhatsApp da Anauê (`https://wa.me/5585996277707?text=Olá!%20Li%20o%20artigo%20no%20blog%20e%20gostaria%20de%20conversar`).
+6. **FAQ Estruturado:** Mínimo de 3 perguntas e respostas frequentes no final com marcação `FAQPage` em JSON-LD.
+7. **Chamada para Ação (CTA):** Botão direto para o WhatsApp da Anauê (`https://wa.me/5585996277707?text=Olá!%20Li%20o%20artigo%20no%20blog%20e%20gostaria%20de%20conversar`).
 
 ---
 
-## 6. Direção de Arte e Imagem de Capa
-* Criar uma capa proporcional 16:9 através da ferramenta `generate_image`.
-* Estilo visual: Minimalista, editorial moderno, cores da Anauê (azul profundo `#0a1128`, ciano elétrico `#00e5ff`, roxo neon ou toques dourados), sem pessoas caricatas ou clichês de IA de baixa qualidade.
-* Salvar a imagem otimizada em `assets/images/blog/<slug-do-artigo>.webp`.
+## 6. Direção de Arte e Imagem de Capa (Padrão Google Discover)
+* Criar uma capa proporcional 16:9 através da ferramenta `generate_image` (largura mínima de **1200px**, obrigatória para o Google Discover).
+* Estilo visual: Minimalista, editorial moderno, cores da Anauê (azul profundo `#0a1128`, ciano elétrico `#00e5ff`, verde vibrante `#57b952` ou toques contrastantes), sem pessoas caricatas ou clichês de IA de baixa qualidade.
+* **REGRA TÉCNICA DE COMPRESSÃO (WebP Real):** A imagem gerada DEVE ser salva ou convertida como formato **WebP legítimo** (com assinatura `RIFF...WEBP`), qualidade 82 e peso inferior a 120 KB. Jamais renomear um arquivo JPEG ou PNG bruto para `.webp` sem transcodificação.
+* Salvar em: `assets/images/blog/<slug-do-artigo>.webp`.
 
 ---
 
 ## 7. Publicação Técnica & Deploy Contínuo (Git Automático)
-1. Criar o arquivo HTML individual em `blog/<slug-do-artigo>.html` seguindo o template responsivo da Anauê.
-2. Inserir Schema `NewsArticle` ou `BlogPosting` completo com autor, data, publisher e imagem.
-3. Atualizar o grid de artigos no `blog.html` adicionando o novo card no topo com a respectiva tag de categoria.
-4. Adicionar a nova URL no `sitemap.xml` com `<lastmod>` atualizado.
-5. **Commit e Push Automáticos (Obrigatório):** Ao concluir a criação, validação do HTML e registro em `blog.html` e `sitemap.xml`, o agente DEVE executar automaticamente o commit e o push das alterações para o repositório remoto no Git:
+1. Criar o arquivo HTML individual em `blog/<slug-do-artigo>.html` utilizando como base o template responsivo [template-post.html](file:///.agents/skills/redacao-editorial/template-post.html).
+2. Utilizar o utilitário [publisher.js](file:///.agents/skills/redacao-editorial/publisher.js) (`publishPostToBlog`) para:
+   - Inserir o card da matéria no grid de [blog.html](file:///blog.html).
+   - Registrar a nova URL no [sitemap.xml](file:///sitemap.xml) com `<lastmod>` atualizado.
+   - Registrar o artigo e resumo no [llms.txt](file:///llms.txt) para indexação por motores de busca baseados em IA.
+3. **Commit e Push Automáticos (Obrigatório):** Ao concluir a criação, validação do HTML e registro, o agente DEVE executar o commit e push:
    ```bash
-   git add blog/<slug>.html assets/images/blog/<slug>.* blog.html sitemap.xml
+   git add blog/<slug>.html assets/images/blog/<slug>.* blog.html sitemap.xml llms.txt .agents/
    git commit -m "feat(editorial): publicar materia <slug>"
    git push origin main
    ```
-   *Essa etapa garante a entrega contínua e a publicação imediata da matéria em produção sem depender de intervenções manuais.*
+
+---
+
+## 8. Checklist de Diretrizes Obrigatórias do Google Search Console & Google Discover
+
+Todo artigo publicado DEVE atender rigorosamente a 100% dos requisitos abaixo para assegurar indexação rápida, visualização ampliada no Google Discover e elegibilidade a Rich Results no Google Search Console:
+
+### A. Metatags e Rastreamento (Google Discover & SERP)
+- [x] **Meta Robots Completa:** É **obrigatório** conter:
+  ```html
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  ```
+  *(A diretiva `max-image-preview:large` é a exigência explícita do Google para exibição de cartões grandes no Google Discover e snippets visuais no Search).*
+- [x] **Tag Canonical Auto-referencial:**
+  ```html
+  <link rel="canonical" href="https://anauedesign.com.br/blog/<slug>.html">
+  ```
+- [x] **Metatags OpenGraph de Artigo:**
+  ```html
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="YYYY-MM-DDTHH:MM:SS-03:00">
+  <meta property="article:modified_time" content="YYYY-MM-DDTHH:MM:SS-03:00">
+  <meta property="article:section" content="<Nome da Categoria>">
+  <meta property="article:author" content="https://anauedesign.com.br/quem-somos.html">
+  ```
+
+### B. Core Web Vitals & Otimização de LCP na Imagem de Capa
+- [x] A tag `<img>` da capa do artigo no topo do post DEVE conter `fetchpriority="high"` e `loading="eager"` (nunca usar `loading="lazy"` na imagem de capa, pois ela é o elemento LCP da página):
+  ```html
+  <div class="post-cover">
+    <img src="/assets/images/blog/<slug>.webp" alt="<Descrição rica da imagem>" width="1200" height="630" loading="eager" fetchpriority="high">
+  </div>
+  ```
+
+### C. Dados Estruturados Schema.org (Google Rich Results Test)
+- [x] **BlogPosting:**
+  - `headline`: Máximo de 110 caracteres, correspondente ao título.
+  - `image`: URL absoluta da imagem em alta resolução (mínimo 1200px).
+  - `datePublished` e `dateModified`: Formato ISO 8601 com timezone.
+  - `author`: Objeto `Organization` ou `Person` com nome e URL institucional `/quem-somos.html`.
+  - `publisher`: Objeto `LocalBusiness` / `Organization` da Anauê Design com logotipo em alta resolução.
+  - `mainEntityOfPage`: URL canônica do artigo.
+- [x] **BreadcrumbList:** Hierarquia de navegação em 3 níveis (Início > Blog > Título).
+- [x] **FAQPage:** Marcação estruturada para todas as perguntas e respostas do bloco de FAQ do artigo.
+
+### D. Qualidade de Conteúdo E-E-A-T (Google Helpful Content System)
+- [x] **Originalidade:** Sem conteúdo genérico; apresentar análises técnicas aprofundadas, dados estatísticos recentes e estudos de caso.
+- [x] **Transparência de Autoria:** Byline visível na página com nome do autor/redação, tempo de leitura e data de publicação.
+- [x] **Sem Poluição de Palavras-chave:** Escrita natural orientada ao leitor humano, priorizando clareza, autoridade e precisão técnica.
 

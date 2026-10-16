@@ -97,3 +97,12 @@ Empresas locais em Fortaleza e negócios de todo o Brasil que buscam crescimento
 - [Customização Moodle](https://anauedesign.com.br/customizacao-moodle.html) — Plataformas de ensino
 - [Quem Somos](https://anauedesign.com.br/quem-somos.html) — História e equipe
 - [Blog](https://anauedesign.com.br/blog.html) — Conteúdo sobre marketing digital e tecnologia
+- [RIA360°](https://anauedesign.com.br/ria360/) — Recepcionista com inteligência artificial para clínicas e salões
+
+## Artigos Publicados no Blog
+
+- [Mídia Paga Além da Vaidade: Como Construir Funis com First-Party Data e ROI Real](https://anauedesign.com.br/blog/midia-paga-roi-real-atribuicao-first-party-data.html) — Campanhas de Google Ads e Meta Ads com First-Party Data, rastreamento Server-Side e atribuição multitoque.
+- [Microcópia e Psicologia Visual: Otimização de Conversão e CRO](https://anauedesign.com.br/blog/microcopia-psicologia-visual-cro-conversao.html) — Técnicas de UX writing, redução de atrito cognitivo e gatilhos visuais para alavancar taxas de conversão.
+- [Agentes Autônomos de IA no WhatsApp: Da Qualificação ao Fechamento](https://anauedesign.com.br/blog/agentes-autonomos-ia-whatsapp.html) — Como empresas utilizam agentes de IA generativa e LLMs para qualificar leads 24h e acelerar vendas no WhatsApp.
+- [PWAs vs Apps Nativos: Guia de Performance e Vendas](https://anauedesign.com.br/blog/pwa-alta-conversao-2026.html) — Comparativo de custos, engajamento e taxas de conversão entre Progressive Web Apps e aplicativos nativos.
+- [GEO (Generative Engine Optimization): Posicionamento em IAs](https://anauedesign.com.br/blog/geo-generative-engine-optimization-2026.html) — Guia técnico para citação e recomendação por assistentes de IA generativa (ChatGPT, Perplexity, Gemini, Claude).

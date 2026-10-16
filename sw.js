@@ -3,15 +3,16 @@
  * Versão: 1.0.0
  */
 
-const CACHE_NAME = 'anaue-cache-v12';
+const CACHE_NAME = 'anaue-cache-v13';
 const PRECACHE_ASSETS = [
   '/',
   '/index.html',
-  '/style.min.css?v=48',
-  '/script.min.js?v=48',
+  '/style.min.css?v=51',
+  '/script.min.js?v=51',
   '/manifest.json',
   '/favicon.ico',
   '/assets/images/logo-anaue-design-marketing-ia-negativo.png',
+  '/assets/images/icons/android-icon-512x512.png',
   '/assets/images/icons/android-icon-192x192.png',
   '/assets/images/icons/favicon-32x32.png',
   '/assets/images/icons/apple-touch-icon-180x180.png'

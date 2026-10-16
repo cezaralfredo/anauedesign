@@ -53,13 +53,26 @@ function publishPostToBlog({ slug, title, description, category, dateFormatted, 
       console.log(`[OK] URL adicionada ao sitemap.xml`);
     }
   }
+
+  // 3. Adicionar URL ao llms.txt (Descoberta por motores de IA / GEO)
+  const LLMS_PATH = path.join(ROOT_DIR, 'llms.txt');
+  if (fs.existsSync(LLMS_PATH)) {
+    let llmsContent = fs.readFileSync(LLMS_PATH, 'utf-8');
+    const blogUrl = `https://anauedesign.com.br/blog/${slug}.html`;
+    if (!llmsContent.includes(blogUrl)) {
+      const newLlmsEntry = `- [${title}](${blogUrl}) — ${description}\n`;
+      llmsContent = llmsContent.trimEnd() + '\n' + newLlmsEntry;
+      fs.writeFileSync(LLMS_PATH, llmsContent, 'utf-8');
+      console.log(`[OK] Artigo adicionado ao llms.txt para motores de IA`);
+    }
+  }
 }
 
 function commitAndPushPost({ slug, title }) {
   const { execSync } = require('child_process');
   try {
     console.log(`[GIT] Adicionando arquivos da matéria ${slug}...`);
-    execSync('git add blog/ assets/images/blog/ blog.html sitemap.xml .agents/', { cwd: ROOT_DIR, stdio: 'inherit' });
+    execSync('git add blog/ assets/images/blog/ blog.html sitemap.xml llms.txt .agents/', { cwd: ROOT_DIR, stdio: 'inherit' });
     
     const commitMsg = `feat(editorial): publicar materia ${slug}`;
     console.log(`[GIT] Executando commit: "${commitMsg}"...`);
