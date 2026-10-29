@@ -42,7 +42,7 @@
   <!-- Blog -->
   <url>
     <loc>https://anauedesign.com.br/blog.html</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-10-29</lastmod>
   </url>
   <url>
     <loc>https://anauedesign.com.br/blog/midia-paga-roi-real-atribuicao-first-party-data.html</loc>
@@ -93,6 +93,12 @@
   <url>
     <loc>https://anauedesign.com.br/blog/arquitetura-ecommerce-checkout-conversao-vendas.html</loc>
     <lastmod>2026-10-26T08:00:00-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://anauedesign.com.br/blog/hospedagem-gerenciada-ttfb-infraestrutura-webmaster.html</loc>
+    <lastmod>2026-10-29T08:00:00-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
