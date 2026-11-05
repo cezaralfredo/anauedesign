@@ -96,9 +96,14 @@ Todo artigo gerado deve conter:
 
 ---
 
-## 6. Direção de Arte e Imagem de Capa (Padrão Google Discover)
-* Criar uma capa proporcional 16:9 através da ferramenta `generate_image` (largura mínima de **1200px**, obrigatória para o Google Discover).
-* Estilo visual: Minimalista, editorial moderno, cores da Anauê (azul profundo `#0a1128`, ciano elétrico `#00e5ff`, verde vibrante `#57b952` ou toques contrastantes), sem pessoas caricatas ou clichês de IA de baixa qualidade.
+## 6. Direção de Arte e Imagem de Capa (Padrão Google Discover & Fotografia Editorial Humanizada)
+* Criar uma capa proporcional 16:9 através da ferramenta de geração de imagens (largura mínima de **1200px**, obrigatória para o Google Discover).
+* **NOVA DIRETRIZ VISUAL: FOTOGRAFIA EDITORIAL HUMANIZADA (SEM RENDERS 3D/CGI):**
+  - **Estilo:** Fotografia editorial corporativa moderna e autêntica (estilo *Wired*, *Fast Company*, *Bloomberg Businessweek*), com estética cinematográfica e calor humano.
+  - **Presença Humana Natural:** Pessoas e profissionais reais em interações genuínas no ambiente de trabalho contemporâneo (colaborando em salas iluminadas, imersos em planejamento estratégico, interagindo com telas de forma orgânica, mentorias ou momentos de foco). Gestos autênticos, sem poses caricatas de banco de imagens gratuito nem "sorrisos de comercial".
+  - **Iluminação & Textura:** Iluminação natural de grandes janelas ou luz de estúdio suave (soft light), profundidade de campo suave (bokeh cinematográfico focando na pessoa/ação e desfocando o fundo), texturas orgânicas reais.
+  - **PROIBIDO (Anti-Padrão 3D/CGI):** Renders plásticos em 3D, elementos isométricos flutuantes, esferas de vidro digitais, hologramas neon, cabos e circuitos flutuantes abstratos ou robôs clichês. A tecnologia deve ser retratada como extensão humana (em notebooks de borda fina, tablets, displays corporativos ou anotações reais).
+  - **Harmonização Cromática Anauê:** As cores institucionais (azul profundo `#0a1128`, toques pontuais de ciano `#00e5ff` e verde `#57b952`) entram de forma orgânica e sutil: na paleta de cores do ambiente, iluminação indireta suave (luzes de fundo), detalhes de figurino elegante ou arquitetura moderna de agência/escritório.
 * **REGRA TÉCNICA DE COMPRESSÃO (WebP Real):** A imagem gerada DEVE ser salva ou convertida como formato **WebP legítimo** (com assinatura `RIFF...WEBP`), qualidade 82 e peso inferior a 120 KB. Jamais renomear um arquivo JPEG ou PNG bruto para `.webp` sem transcodificação.
 * Salvar em: `assets/images/blog/<slug-do-artigo>.webp`.
 
