@@ -8,7 +8,9 @@ description: "Pipeline jornalística e editorial autônoma da Anauê Design para
 Este skill executa o fluxo completo de uma redação digital profissional para o portal da Anauê Design (`anauedesign.com.br`).
 
 ## 1. Escopo Temático da Anauê Design (11 Categorias Oficiais)
+
 Os artigos devem sempre focar nas 11 especialidades e pilares de negócio da agência:
+
 1. **Inteligência Artificial & Automação de Negócios:** Agentes autônomos, integrações de WhatsApp, LLMs para empresas, automação de processos internos.
 2. **SEO & GEO (Generative Engine Optimization):** Posicionamento orgânico no Google, busca local e citação em IAs (ChatGPT, Perplexity, Gemini, Claude).
 3. **Criação de Sites & Progressive Web Apps (PWA):** Performance web, Core Web Vitals, experiência do usuário (UX/UI), responsividade e arquitetura moderna.
@@ -24,7 +26,9 @@ Os artigos devem sempre focar nas 11 especialidades e pilares de negócio da ag�
 ---
 
 ## 2. Critérios e Ângulos de Pesquisa para as Pautas (Deep Research)
+
 Toda pauta pesquisada e redigida DEVE ser orientada por pelo menos um dos 5 eixos editoriais de alto impacto:
+
 1. **Atualizações Técnicas e de Algoritmo:** Mudanças recentes em ferramentas, novidades em navegadores, Core Web Vitals, updates do Google/OpenAI, novos frameworks e normas vigentes.
 2. **Casos de Sucesso no Mercado (Benchmarks):** Exemplos reais de empresas que aumentaram faturamento, reduziram custos ou otimizaram processos com aquela solução.
 3. **Novidades do Mercado:** Ferramentas recém-lançadas, novos recursos de software, plataformas emergentes e integrações inéditas.
@@ -34,35 +38,38 @@ Toda pauta pesquisada e redigida DEVE ser orientada por pelo menos um dos 5 eixo
 ---
 
 ## 3. Matriz de Agendamento em Ciclo Contínuo (Loop Editorial)
-* **Frequência de Publicação:** **2 vezes por semana** — toda **Segunda-feira** e **Quinta-feira**.
-* **Ordem de Execução do Loop (11 Categorias):**
+
+- **Frequência de Publicação:** **2 vezes por semana** — toda **Segunda-feira** e **Quinta-feira**.
+- **Ordem de Execução do Loop (11 Categorias):**
   O ciclo opera em loop infinito (ao terminar o item 11, reinicia automaticamente no item 1):
 
-| Ciclo | Dia da Semana | Categoria Editorial | Foco de Pesquisa & Ângulo |
-| :--- | :--- | :--- | :--- |
-| **Slot 1** | **Segunda-feira** | **1. Criação de Sites & PWAs** | *Tendências, Performance, Core Web Vitals e UX moderno* |
-| **Slot 2** | **Quinta-feira** | **2. SEO Técnico & GEO (Buscas por IA)** | *Atualizações Google/Search Central, IAs generativas e citações* |
-| **Slot 3** | **Segunda-feira** | **3. Inteligência Artificial & Automação** | *Novidades, automações WhatsApp, casos de sucesso e LLMs* |
-| **Slot 4** | **Quinta-feira** | **4. CRO & Otimização de Conversão** | *Casos de sucesso, testes A/B, microcópia e aumento de taxas* |
-| **Slot 5** | **Segunda-feira** | **5. Marketing Digital & Performance** | *Updates de mídia paga, estratégias de tráfego e ROI real* |
-| **Slot 6** | **Quinta-feira** | **6. Automação de Vendas & CRM** | *Tendências RevOps, integração WhatsApp + CRM e follow-up ágil* |
-| **Slot 7** | **Segunda-feira** | **7. Branding & Design Digital** | *Design systems, psicologia visual, tendências visuais corporativas* |
-| **Slot 8** | **Quinta-feira** | **8. E-commerce & Vendas Digitais** | *Novidades do comércio eletrônico, checkout rápido e conversão* |
-| **Slot 9** | **Segunda-feira** | **9. Hospedagem Gerenciada & Webmaster** | *Infraestrutura de ponta, velocidade de servidor (TTFB) e uptime* |
-| **Slot 10** | **Quinta-feira** | **10. Segurança Digital, LGPD & Conformidade** | *Atualizações em segurança web, mitigação de riscos e privacidade* |
-| **Slot 11** | **Segunda-feira** | **11. Customização Moodle & EAD Corporativo** | *Novidades e casos de sucesso em retenção e experiência de alunos* |
-| ↻ *Loop* | **Quinta-feira** | **1. Criação de Sites & PWAs (Reinício do Loop)** | *Novo ângulo com atualização/hype/estudo de caso recente* |
+| Ciclo       | Dia da Semana     | Categoria Editorial                               | Foco de Pesquisa & Ângulo                                            |
+| :---------- | :---------------- | :------------------------------------------------ | :------------------------------------------------------------------- |
+| **Slot 1**  | **Segunda-feira** | **1. Criação de Sites & PWAs**                    | _Tendências, Performance, Core Web Vitals e UX moderno_              |
+| **Slot 2**  | **Quinta-feira**  | **2. SEO Técnico & GEO (Buscas por IA)**          | _Atualizações Google/Search Central, IAs generativas e citações_     |
+| **Slot 3**  | **Segunda-feira** | **3. Inteligência Artificial & Automação**        | _Novidades, automações WhatsApp, casos de sucesso e LLMs_            |
+| **Slot 4**  | **Quinta-feira**  | **4. CRO & Otimização de Conversão**              | _Casos de sucesso, testes A/B, microcópia e aumento de taxas_        |
+| **Slot 5**  | **Segunda-feira** | **5. Marketing Digital & Performance**            | _Updates de mídia paga, estratégias de tráfego e ROI real_           |
+| **Slot 6**  | **Quinta-feira**  | **6. Automação de Vendas & CRM**                  | _Tendências RevOps, integração WhatsApp + CRM e follow-up ágil_      |
+| **Slot 7**  | **Segunda-feira** | **7. Branding & Design Digital**                  | _Design systems, psicologia visual, tendências visuais corporativas_ |
+| **Slot 8**  | **Quinta-feira**  | **8. E-commerce & Vendas Digitais**               | _Novidades do comércio eletrônico, checkout rápido e conversão_      |
+| **Slot 9**  | **Segunda-feira** | **9. Hospedagem Gerenciada & Webmaster**          | _Infraestrutura de ponta, velocidade de servidor (TTFB) e uptime_    |
+| **Slot 10** | **Quinta-feira**  | **10. Segurança Digital, LGPD & Conformidade**    | _Atualizações em segurança web, mitigação de riscos e privacidade_   |
+| **Slot 11** | **Segunda-feira** | **11. Customização Moodle & EAD Corporativo**     | _Novidades e casos de sucesso em retenção e experiência de alunos_   |
+| ↻ _Loop_    | **Quinta-feira**  | **1. Criação de Sites & PWAs (Reinício do Loop)** | _Novo ângulo com atualização/hype/estudo de caso recente_            |
 
 ---
 
 ## 4. Fontes Enriquecidas de Pesquisa & Apuração
+
 Antes de escrever qualquer linha, o agente DEVE pesquisar e apurar dados factuais, benchmarks e citações reais utilizando:
-* **Mecanismos Globais de Pesquisa Técnica:**
+
+- **Mecanismos Globais de Pesquisa Técnica:**
   - Google Search Central Blog, Search Engine Journal, Search Engine Land, Moz, Ahrefs Blog.
   - OpenAI Research, Google AI Blog, DeepMind Research, Anthropic News.
   - Web.dev, MDN Web Docs, Smashing Magazine.
   - Hubspot Research, Neil Patel Blog, Rock Content, Gartner & McKinsey Tech Trends.
-* **Critérios de Validação Jornalística:**
+- **Critérios de Validação Jornalística:**
   - Pelo menos 2 dados estatísticos verídicos ou benchmarks de mercado do ano corrente.
   - 1 exemplo prático de aplicação no mundo real.
   - Nenhuma alucinação ou suposição sem fundamentação.
@@ -70,13 +77,15 @@ Antes de escrever qualquer linha, o agente DEVE pesquisar e apurar dados factuai
 ---
 
 ## 5. Estrutura Padrão do Artigo (Padrão E-E-A-T e Schema.org)
+
 Todo artigo gerado deve conter:
+
 1. **Título Jornalístico Forte e Atemporal (Evergreen):** Chamativo, informativo, focado na dor ou oportunidade do cliente e na intenção de busca orgânica (ideal entre 50 e 65 caracteres para não truncar na SERP).
    - **REGRA CRÍTICA DE ATEMPORALIDADE:** **NÃO use anos (ex: "2026", "em 2026") no título (H1, `<title>`, Open Graph), na URL/slug ou nas chamadas.** Os conteúdos devem ser perenes (evergreen), mantendo relevância contínua sem parecerem datados ou obsoletos com o passar do tempo. Exemplos:
-     * *Em vez de:* "Por Que Empresas Estão Trocando Apps Nativos por PWAs em 2026?"
-     * *Use:* "Por Que Empresas Estão Trocando Apps Nativos por PWAs? Guia de Performance e Conversão"
-     * *Em vez de:* "GEO: O Guia Definitivo para 2026"
-     * *Use:* "GEO (Generative Engine Optimization): O Guia Definitivo para Posicionamento em IAs"
+     - _Em vez de:_ "Por Que Empresas Estão Trocando Apps Nativos por PWAs em 2026?"
+     - _Use:_ "Por Que Empresas Estão Trocando Apps Nativos por PWAs? Guia de Performance e Conversão"
+     - _Em vez de:_ "GEO: O Guia Definitivo para 2026"
+     - _Use:_ "GEO (Generative Engine Optimization): O Guia Definitivo para Posicionamento em IAs"
 2. **Meta Description de Alta Conversão:** Entre 140 e 160 caracteres, contendo a palavra-chave principal e uma proposta de valor clara para atrair cliques orgânicos (CTR).
 3. **Lead / Gancho Editorial:** Os primeiros dois parágrafos devem contextualizar o problema com urgência e relevância de mercado.
 4. **Corpo do Texto (1.200 a 2.000 palavras):**
@@ -97,19 +106,21 @@ Todo artigo gerado deve conter:
 ---
 
 ## 6. Direção de Arte e Imagem de Capa (Padrão Google Discover & Fotografia Editorial Humanizada)
-* Criar uma capa proporcional 16:9 através da ferramenta de geração de imagens (largura mínima de **1200px**, obrigatória para o Google Discover).
-* **NOVA DIRETRIZ VISUAL: FOTOGRAFIA EDITORIAL HUMANIZADA (SEM RENDERS 3D/CGI):**
-  - **Estilo:** Fotografia editorial corporativa moderna e autêntica (estilo *Wired*, *Fast Company*, *Bloomberg Businessweek*), com estética cinematográfica e calor humano.
+
+- Criar uma capa proporcional 16:9 através da ferramenta de geração de imagens (largura mínima de **1200px**, obrigatória para o Google Discover).
+- **NOVA DIRETRIZ VISUAL: FOTOGRAFIA EDITORIAL HUMANIZADA (SEM RENDERS 3D/CGI):**
+  - **Estilo:** Fotografia editorial corporativa moderna e autêntica (estilo _Wired_, _Fast Company_, _Bloomberg Businessweek_), com estética cinematográfica e calor humano.
   - **Presença Humana Natural:** Pessoas e profissionais reais em interações genuínas no ambiente de trabalho contemporâneo (colaborando em salas iluminadas, imersos em planejamento estratégico, interagindo com telas de forma orgânica, mentorias ou momentos de foco). Gestos autênticos, sem poses caricatas de banco de imagens gratuito nem "sorrisos de comercial".
   - **Iluminação & Textura:** Iluminação natural de grandes janelas ou luz de estúdio suave (soft light), profundidade de campo suave (bokeh cinematográfico focando na pessoa/ação e desfocando o fundo), texturas orgânicas reais.
   - **PROIBIDO (Anti-Padrão 3D/CGI):** Renders plásticos em 3D, elementos isométricos flutuantes, esferas de vidro digitais, hologramas neon, cabos e circuitos flutuantes abstratos ou robôs clichês. A tecnologia deve ser retratada como extensão humana (em notebooks de borda fina, tablets, displays corporativos ou anotações reais).
   - **Harmonização Cromática Anauê:** As cores institucionais (azul profundo `#0a1128`, toques pontuais de ciano `#00e5ff` e verde `#57b952`) entram de forma orgânica e sutil: na paleta de cores do ambiente, iluminação indireta suave (luzes de fundo), detalhes de figurino elegante ou arquitetura moderna de agência/escritório.
-* **REGRA TÉCNICA DE COMPRESSÃO (WebP Real):** A imagem gerada DEVE ser salva ou convertida como formato **WebP legítimo** (com assinatura `RIFF...WEBP`), qualidade 82 e peso inferior a 120 KB. Jamais renomear um arquivo JPEG ou PNG bruto para `.webp` sem transcodificação.
-* Salvar em: `assets/images/blog/<slug-do-artigo>.webp`.
+- **REGRA TÉCNICA DE COMPRESSÃO (WebP Real):** A imagem gerada DEVE ser salva ou convertida como formato **WebP legítimo** (com assinatura `RIFF...WEBP`), qualidade 82 e peso inferior a 120 KB. Jamais renomear um arquivo JPEG ou PNG bruto para `.webp` sem transcodificação.
+- Salvar em: `assets/images/blog/<slug-do-artigo>.webp`.
 
 ---
 
 ## 7. Publicação Técnica & Deploy Contínuo (Git Automático)
+
 1. Criar o arquivo HTML individual em `blog/<slug-do-artigo>.html` utilizando como base o template responsivo [template-post.html](file:///.agents/skills/redacao-editorial/template-post.html).
 2. Utilizar o utilitário [publisher.js](file:///.agents/skills/redacao-editorial/publisher.js) (`publishPostToBlog`) para:
    - Inserir o card da matéria no grid de [blog.html](file:///blog.html).
@@ -129,33 +140,49 @@ Todo artigo gerado deve conter:
 Todo artigo publicado DEVE atender rigorosamente a 100% dos requisitos abaixo para assegurar indexação rápida, visualização ampliada no Google Discover e elegibilidade a Rich Results no Google Search Console:
 
 ### A. Metatags e Rastreamento (Google Discover & SERP)
+
 - [x] **Meta Robots Completa:** É **obrigatório** conter:
   ```html
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  />
   ```
-  *(A diretiva `max-image-preview:large` é a exigência explícita do Google para exibição de cartões grandes no Google Discover e snippets visuais no Search).*
+  _(A diretiva `max-image-preview:large` é a exigência explícita do Google para exibição de cartões grandes no Google Discover e snippets visuais no Search)._
 - [x] **Tag Canonical Auto-referencial:**
   ```html
-  <link rel="canonical" href="https://anauedesign.com.br/blog/<slug>.html">
+  <link rel="canonical" href="https://anauedesign.com.br/blog/<slug>.html" />
   ```
 - [x] **Metatags OpenGraph de Artigo:**
   ```html
-  <meta property="og:type" content="article">
-  <meta property="article:published_time" content="YYYY-MM-DDTHH:MM:SS-03:00">
-  <meta property="article:modified_time" content="YYYY-MM-DDTHH:MM:SS-03:00">
-  <meta property="article:section" content="<Nome da Categoria>">
-  <meta property="article:author" content="https://anauedesign.com.br/quem-somos.html">
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="YYYY-MM-DDTHH:MM:SS-03:00" />
+  <meta property="article:modified_time" content="YYYY-MM-DDTHH:MM:SS-03:00" />
+  <meta property="article:section" content="<Nome da Categoria>" />
+  <meta
+    property="article:author"
+    content="https://anauedesign.com.br/quem-somos.html"
+  />
   ```
 
 ### B. Core Web Vitals & Otimização de LCP na Imagem de Capa
+
 - [x] A tag `<img>` da capa do artigo no topo do post DEVE conter `fetchpriority="high"` e `loading="eager"` (nunca usar `loading="lazy"` na imagem de capa, pois ela é o elemento LCP da página):
   ```html
   <div class="post-cover">
-    <img src="/assets/images/blog/<slug>.webp" alt="<Descrição rica da imagem>" width="1200" height="630" loading="eager" fetchpriority="high">
+    <img
+      src="/assets/images/blog/<slug>.webp"
+      alt="<Descrição rica da imagem>"
+      width="1200"
+      height="630"
+      loading="eager"
+      fetchpriority="high"
+    />
   </div>
   ```
 
 ### C. Dados Estruturados Schema.org (Google Rich Results Test)
+
 - [x] **BlogPosting:**
   - `headline`: Máximo de 110 caracteres, correspondente ao título.
   - `image`: URL absoluta da imagem em alta resolução (mínimo 1200px).
@@ -167,7 +194,7 @@ Todo artigo publicado DEVE atender rigorosamente a 100% dos requisitos abaixo pa
 - [x] **FAQPage:** Marcação estruturada para todas as perguntas e respostas do bloco de FAQ do artigo.
 
 ### D. Qualidade de Conteúdo E-E-A-T (Google Helpful Content System)
+
 - [x] **Originalidade:** Sem conteúdo genérico; apresentar análises técnicas aprofundadas, dados estatísticos recentes e estudos de caso.
 - [x] **Transparência de Autoria:** Byline visível na página com nome do autor/redação, tempo de leitura e data de publicação.
 - [x] **Sem Poluição de Palavras-chave:** Escrita natural orientada ao leitor humano, priorizando clareza, autoridade e precisão técnica.
-
