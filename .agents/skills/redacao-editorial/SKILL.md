@@ -60,19 +60,74 @@ Toda pauta pesquisada e redigida DEVE ser orientada por pelo menos um dos 5 eixo
 
 ---
 
-## 4. Fontes Enriquecidas de Pesquisa & Apuração
+## 4. Fontes Enriquecidas de Pesquisa & Apuração (Deep Research Multi-Pilar)
 
-Antes de escrever qualquer linha, o agente DEVE pesquisar e apurar dados factuais, benchmarks e citações reais utilizando:
+Antes de escrever qualquer linha, o agente DEVE pesquisar e apurar dados factuais, benchmarks consolidados e citações reais de instituições com autoridade internacional e nacional, organizadas por especialidade:
 
-- **Mecanismos Globais de Pesquisa Técnica:**
-  - Google Search Central Blog, Search Engine Journal, Search Engine Land, Moz, Ahrefs Blog.
-  - OpenAI Research, Google AI Blog, DeepMind Research, Anthropic News.
-  - Web.dev, MDN Web Docs, Smashing Magazine.
-  - Hubspot Research, Neil Patel Blog, Rock Content, Gartner & McKinsey Tech Trends.
-- **Critérios de Validação Jornalística:**
-  - Pelo menos 2 dados estatísticos verídicos ou benchmarks de mercado do ano corrente.
+- **1. Inteligência Artificial, Agentes & RAG:**
+  - *Stanford HAI (Human-Centered AI - AI Index Report)*: Métricas anuais consolidadas de avanço em modelos, adoção corporativa e custos de inferência.
+  - *MIT Technology Review Insights*: Casos de uso corporativos, governança e impactos operacionais.
+  - *OpenAI Research, Google DeepMind & Anthropic News*: Atualizações de estado da arte, raciocínio, contexto e segurança em LLMs.
+  - *LangChain Blog & Hugging Face Research*: Arquitetura de agentes, RAG, function calling e avaliações de acurácia.
+
+- **2. SEO Técnico, GEO & Buscas por IA:**
+  - *Google Search Central Blog & Documentação Oficial*: Atualizações do algoritmo, AI Overviews e diretrizes para webmasters.
+  - *Princeton GEO Framework (Kakar et al.)*: O estudo acadêmico seminal que comprovou ganho de até 40% em visibilidade generativa com citações e dados estruturados.
+  - *Search Engine Land, Search Engine Journal & Ahrefs Blog*: Estudos empíricos de SERP, tráfego zero-click e migração de buscas.
+  - *Semrush State of Search & Peec AI / Profound*: Monitoramento de prevalência de citações em ChatGPT, Perplexity, Gemini e Claude.
+
+- **3. Criação de Sites, PWAs & Performance Web:**
+  - *Web.dev & Chrome Developers (CrUX - Chrome User Experience Report)*: Métricas reais de Core Web Vitals (LCP, INP, CLS) em campo.
+  - *HTTP Archive (Web Almanac)*: Censo anual da web mundial sobre adoção de PWA, peso de páginas e tecnologias de renderização.
+  - *Nielsen Norman Group (NN/g)*: A maior autoridade global em usabilidade, arquitetura de informação e UX empírico.
+  - *MDN Web Docs (Mozilla)*: Especificações técnicas de padrões web, APIs de service workers e acessibilidade (W3C/WCAG).
+
+- **4. Marketing Digital & Performance:**
+  - *Think with Google*: Dados proprietários de consumo, comportamento de busca regional (Brasil/América Latina) e atribuição.
+  - *Meta Foresight & Meta for Business*: Tendências de consumo, social commerce e eficiência criativa no Instagram e Facebook.
+  - *WordStream / LocaliQ Benchmarks*: Dados reais de CPC, CTR e taxa de conversão do Google Ads e Meta Ads por segmento de mercado.
+  - *HubSpot Research*: Relatórios anuais do Estado do Inbound Marketing e eficiência de funis de vendas.
+
+- **5. Hospedagem Gerenciada & Infraestrutura Webmaster:**
+  - *Cloudflare Radar & Blog*: Dados de tráfego global da internet, novos protocolos (HTTP/3, QUIC), ataques DDoS e computação de borda (Edge).
+  - *Datadog State of Cloud & Fastly*: Relatórios de latência, tempo até o primeiro byte (TTFB) e confiabilidade de microsserviços.
+  - *W3Techs*: Estatísticas globais de uso de servidores web, linguagens e sistemas operacionais.
+
+- **6. Customização Moodle & EAD Corporativo:**
+  - *Moodle.org Research & Community News*: Roadmap oficial, melhores práticas de arquitetura e segurança para grandes bases de alunos.
+  - *ATD (Association for Talent Development)*: Pesquisa anual *State of the Industry* sobre investimento, engajamento e retenção corporativa.
+  - *Brandon Hall Group*: Estudos de ROI e excelência em tecnologias educacionais empresariais.
+
+- **7. CRO & Otimização de Conversão:**
+  - *CXL (Conversion XL) Institute*: Estudos empíricos de psicologia comportamental, eye-tracking, testes A/B e microcópia.
+  - *Baymard Institute*: O benchmark supremo mundial em usabilidade de checkout e taxa de conversão em compras digitais (mais de 130.000 horas de testes).
+  - *Unbounce Conversion Benchmark Report*: Taxas médias de conversão de landing pages em mais de 10 setores da economia.
+
+- **8. Segurança Digital, LGPD & Conformidade Web:**
+  - *ANPD (Autoridade Nacional de Proteção de Dados)*: Guias orientativos oficiais, enunciados, fiscalizações e normas de conformidade no Brasil.
+  - *OWASP (Open Web Application Security Project)*: *OWASP Top 10 Web Application Vulnerabilities* e o novo *OWASP Top 10 for Large Language Model Applications*.
+  - *IBM Security / Ponemon Institute (Cost of a Data Breach Report)*: Relatório anual com o custo financeiro real de vazamentos e resposta a incidentes.
+  - *CERT.br / NIC.br (CGI.br)*: Estatísticas oficiais de segurança e incidentes cibernéticos na internet brasileira.
+
+- **9. Automação de Vendas & CRM:**
+  - *Salesforce Research (State of Sales & State of Service)*: O maior estudo corporativo global sobre produtividade comercial, adoção de IA e RevOps.
+  - *Zendesk CX Trends*: Benchmarks sobre atendimento conversacional, expectativas de clientes e mensuração de CSAT e FCR.
+  - *Bain & Company & McKinsey*: Estudos estratégicos de valor do tempo de resposta (FRT) e multiplicação de LTV.
+
+- **10. Branding & Design Digital:**
+  - *Figma Design Blog & Design Systems Repo*: Casos práticos de escalabilidade visual corporativa, design tokens e governança de interface.
+  - *Interbrand & Brand Finance Global*: Metodologias de avaliação de valor percebido de marca e consistência omnichannel.
+  - *Smashing Magazine*: Artigos aprofundados sobre design ético, microinterações e psicologia visual aplicada.
+
+- **11. E-commerce & Vendas Digitais:**
+  - *Baymard Institute (Cart Abandonment Rate)*: Dados consolidados e atualizados sobre os motivos reais de abandono de carrinho e checkout sem atrito.
+  - *EBIT / Nielsen IQ & ABComm (Associação Brasileira de Comércio Eletrônico)*: Dados oficiais do e-commerce brasileiro, ticket médio e sazonalidades.
+  - *Shopify Enterprise Insights*: Inovações em headless commerce, velocidade de checkout e comércio conversacional.
+
+- **Critérios de Validação Jornalística Obrigatórios:**
+  - Pelo menos 2 dados estatísticos verídicos ou benchmarks de mercado do ano corrente (ou relatório consolidado mais recente das fontes acima).
   - 1 exemplo prático de aplicação no mundo real.
-  - Nenhuma alucinação ou suposição sem fundamentação.
+  - Nenhuma alucinação ou suposição sem fundamentação em uma das fontes oficiais listadas.
 
 ---
 
