@@ -3,126 +3,125 @@
   <!-- Home -->
   <url>
     <loc>https://anauedesign.com.br/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
 
   <!-- Servicos -->
   <url>
     <loc>https://anauedesign.com.br/marketing-digital.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
   <url>
     <loc>https://anauedesign.com.br/criacao-de-sites.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
   <url>
     <loc>https://anauedesign.com.br/inteligencia-artificial.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
   <url>
     <loc>https://anauedesign.com.br/seo.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
   <url>
     <loc>https://anauedesign.com.br/hospedagem.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
   <url>
     <loc>https://anauedesign.com.br/customizacao-moodle.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
 
-  <!-- RIA360: manter somente apos corrigir o loop de redirecionamento
-       e usar aqui exatamente a URL canonica final (com ou sem barra) -->
+  <!-- Solucao Especializada RIA360 -->
   <url>
     <loc>https://anauedesign.com.br/ria360/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-11-17</lastmod>
   </url>
 
-  <!-- Blog -->
+  <!-- Blog Hub -->
   <url>
     <loc>https://anauedesign.com.br/blog.html</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-17</lastmod>
   </url>
   <url>
     <loc>https://anauedesign.com.br/blog/midia-paga-roi-real-atribuicao-first-party-data.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://anauedesign.com.br/blog/microcopia-psicologia-visual-cro-conversao.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://anauedesign.com.br/blog/agentes-autonomos-ia-whatsapp.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
   <url>
     <loc>https://anauedesign.com.br/blog/pwa-alta-conversao-2026.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
   <url>
     <loc>https://anauedesign.com.br/blog/geo-generative-engine-optimization-2026.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
 
   <!-- Institucional -->
   <url>
     <loc>https://anauedesign.com.br/quem-somos.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
   <url>
     <loc>https://anauedesign.com.br/politica-de-privacidade.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-11-16</lastmod>
   </url>
   <url>
     <loc>https://anauedesign.com.br/blog/automacao-vendas-crm-whatsapp-revops.html</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://anauedesign.com.br/blog/design-system-branding-psicologia-visual-valor-marca.html</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://anauedesign.com.br/blog/arquitetura-ecommerce-checkout-conversao-vendas.html</loc>
-    <lastmod>2026-10-26T08:00:00-03:00</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://anauedesign.com.br/blog/hospedagem-gerenciada-ttfb-infraestrutura-webmaster.html</loc>
-    <lastmod>2026-10-29T08:00:00-03:00</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://anauedesign.com.br/blog/seguranca-digital-lgpd-conformidade-web.html</loc>
-    <lastmod>2026-11-02T15:00:00-03:00</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://anauedesign.com.br/blog/customizacao-moodle-ead-corporativo-ux-ia.html</loc>
-    <lastmod>2026-11-05T08:30:00-03:00</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://anauedesign.com.br/blog/redesign-sites-corporativos-core-web-vitals-ux-leads.html</loc>
-    <lastmod>2026-11-09T08:00:00-03:00</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://anauedesign.com.br/blog/geo-busca-semantica-como-ser-citado-por-ias.html</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

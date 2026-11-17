@@ -17,3 +17,6 @@ desktop.ini
 .idea/
 *.sublime-project
 *.sublime-workspace
+
+# SEO exports / reports
+gsc/
