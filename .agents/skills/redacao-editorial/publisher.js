@@ -11,12 +11,37 @@ const BLOG_HTML_PATH = path.join(ROOT_DIR, 'blog.html');
 const SITEMAP_PATH = path.join(ROOT_DIR, 'sitemap.xml');
 
 function publishPostToBlog({ slug, title, description, category, dateFormatted, dateIso }) {
-  // 1. Inserir Card no topo do blog.html
+  // 1. Inserir Card no topo do blog.html (compatível com layout V3 .blog-grid e legado .blog__grid)
   if (fs.existsSync(BLOG_HTML_PATH)) {
     let blogContent = fs.readFileSync(BLOG_HTML_PATH, 'utf-8');
-    const marker = '<div class=blog__grid>';
-    
-    const newCardHtml = `
+    const markerV3 = '<div class="blog-grid">';
+    const markerLegacy = '<div class=blog__grid>';
+
+    if (blogContent.includes(markerV3)) {
+      const lc = (category || '').toLowerCase();
+      let filterGroup = 'estrategia';
+      if (lc.includes('ia') || lc.includes('intelig') || lc.includes('automa')) filterGroup = 'ia';
+      else if (lc.includes('seo') || lc.includes('geo')) filterGroup = 'seo';
+      else if (lc.includes('cro') || lc.includes('convers') || lc.includes('marketing') || lc.includes('mídia') || lc.includes('e-commerce')) filterGroup = 'cro';
+      else if (lc.includes('site') || lc.includes('pwa') || lc.includes('design') || lc.includes('hosped') || lc.includes('seguran') || lc.includes('moodle')) filterGroup = 'tech';
+
+      const newCardV3 = `
+          <a class="blog-card reveal" href="/blog/${slug}.html" data-category="${filterGroup}">
+            <div class="blog-card__img">
+              <img src="/assets/images/blog/${slug}.webp" alt="${title.replace(/"/g, '&quot;')}" width="600" height="338" loading="lazy">
+            </div>
+            <div class="blog-card__body">
+              <span class="blog-card__cat">${category} · ${dateFormatted}</span>
+              <h3>${title}</h3>
+              <p>${description}</p>
+              <span class="blog-card__more">Ler artigo completo →</span>
+            </div>
+          </a>`;
+      blogContent = blogContent.replace(markerV3, `${markerV3}\n${newCardV3}`);
+      fs.writeFileSync(BLOG_HTML_PATH, blogContent, 'utf-8');
+      console.log(`[OK] Card V3 adicionado com sucesso em blog.html`);
+    } else if (blogContent.includes(markerLegacy)) {
+      const newCardHtml = `
 <article class=blog__card>
 <div class=blog__card-body>
 <div class=blog__card-meta>
@@ -28,11 +53,9 @@ function publishPostToBlog({ slug, title, description, category, dateFormatted, 
 <a class=blog__card-link href=/blog/${slug}.html>Ler matéria completa <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
 </div>
 </article>`;
-
-    if (blogContent.includes(marker)) {
-      blogContent = blogContent.replace(marker, `${marker}\n${newCardHtml}`);
+      blogContent = blogContent.replace(markerLegacy, `${markerLegacy}\n${newCardHtml}`);
       fs.writeFileSync(BLOG_HTML_PATH, blogContent, 'utf-8');
-      console.log(`[OK] Card adicionado com sucesso em blog.html`);
+      console.log(`[OK] Card legado adicionado com sucesso em blog.html`);
     }
   }
 

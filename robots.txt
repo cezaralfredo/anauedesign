@@ -3,6 +3,7 @@
 
 User-agent: *
 Allow: /
+Disallow: /site%20antigo/
 
 # Ferramentas de auditoria
 User-agent: AhrefsSiteAudit
