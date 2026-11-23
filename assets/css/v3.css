@@ -2230,3 +2230,292 @@ button {
   cursor: pointer;
 }
 .cookie-banner__btn:hover { background: #4ADE80; }
+
+
+/* ==========================================================================
+   ARTIGOS DO BLOG (V3 EDITORIAL — LEITURA CONFORTÁVEL E PADRÃO UNIFICADO)
+   ========================================================================== */
+.post-hero {
+  padding: clamp(2.75rem, 5vw, 4.25rem) 0 clamp(2rem, 4vw, 3rem);
+  background: linear-gradient(180deg, #FFFFFF 0%, var(--bg) 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.post-hero__inner {
+  max-width: 860px;
+  margin-inline: auto;
+}
+
+.post-hero__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: var(--brand-green-soft);
+  color: var(--brand-green-dk);
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--r-pill);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin-bottom: 1.15rem;
+}
+
+.post-hero__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.14;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+
+.post-hero__sub {
+  font-size: clamp(1.05rem, 1.4vw, 1.18rem);
+  color: var(--ink-2);
+  line-height: 1.68;
+  margin-bottom: 1.5rem;
+}
+
+.post-hero__meta {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  font-size: 0.875rem;
+  color: var(--ink-3);
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--border);
+}
+
+.post-wrap {
+  padding: clamp(2rem, 4vw, 3.25rem) 0 clamp(4rem, 7vw, 6rem);
+  background: var(--bg);
+}
+
+.post-cover {
+  max-width: 960px;
+  margin: 0 auto clamp(2.5rem, 4.5vw, 3.5rem);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  background: var(--bg-subtle);
+}
+
+.post-cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.post-body {
+  max-width: 780px;
+  margin-inline: auto;
+  color: var(--ink);
+  font-size: 1.09rem;
+  line-height: 1.85;
+}
+
+.post-body h2 {
+  font-size: clamp(1.45rem, 2.5vw, 1.85rem);
+  color: var(--brand-blue);
+  margin: 3rem 0 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  border-left: 4px solid var(--brand-blue);
+  padding-left: 0.9rem;
+  line-height: 1.25;
+}
+
+.post-body h3 {
+  font-size: 1.28rem;
+  color: var(--ink);
+  margin: 2rem 0 0.85rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.post-body p {
+  color: var(--ink-2);
+  margin-bottom: 1.35rem;
+}
+
+.post-body strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.post-body ul, .post-body ol {
+  margin: 0 0 1.5rem 1.5rem;
+  color: var(--ink-2);
+}
+
+.post-body li {
+  margin-bottom: 0.65rem;
+  line-height: 1.72;
+}
+
+.post-body a:not(.btn):not(.btn-cta) {
+  color: var(--brand-blue-vivid);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: color var(--t-fast);
+}
+
+.post-body a:not(.btn):not(.btn-cta):hover {
+  color: var(--brand-green-dk);
+}
+
+.post-body code {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  padding: 0.12rem 0.42rem;
+  border-radius: 6px;
+  font-size: 0.9em;
+  color: var(--brand-blue);
+}
+
+.post-alert, .post-callout, .callout, .tip-box {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--brand-blue);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  padding: 1.35rem 1.6rem;
+  margin: 2rem 0;
+  color: var(--ink);
+  font-size: 1rem;
+  box-shadow: var(--shadow-xs);
+}
+
+.post-callout h4 {
+  color: var(--brand-blue);
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 0.45rem;
+}
+
+.post-table-container {
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+.post-alert strong {
+  color: var(--brand-blue);
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 800;
+}
+
+.post-table, .post-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2.25rem 0;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-xs);
+}
+
+.post-table th, .post-table td,
+.post-body table th, .post-body table td {
+  padding: 1rem 1.15rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.post-table th, .post-body table th {
+  background: var(--bg-subtle);
+  color: var(--brand-blue);
+  font-weight: 800;
+}
+
+.post-table td, .post-body table td {
+  color: var(--ink-2);
+}
+
+.post-faq {
+  margin: 3.25rem 0 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.post-faq__item {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 1.35rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.post-faq__item h3 {
+  font-size: 1.12rem;
+  color: var(--brand-blue);
+  margin: 0 0 0.5rem;
+}
+
+.post-faq__item p {
+  margin: 0;
+  font-size: 0.96rem;
+}
+
+.post-cta {
+  background: linear-gradient(135deg, #0B132B 0%, #172A5E 100%);
+  border-radius: var(--r-xl);
+  padding: clamp(2.25rem, 4.5vw, 3.25rem) clamp(1.5rem, 3.5vw, 2.75rem);
+  text-align: center;
+  margin: 3.5rem 0 1rem;
+  color: #FFFFFF;
+  box-shadow: var(--shadow-lg);
+}
+
+.post-cta h3 {
+  font-size: clamp(1.45rem, 2.5vw, 1.85rem);
+  color: #FFFFFF;
+  margin: 0 0 0.85rem;
+  font-weight: 800;
+}
+
+.post-cta p {
+  color: var(--ink-on-dark-2);
+  max-width: 580px;
+  margin: 0 auto 1.75rem;
+  font-size: 1rem;
+}
+
+.post-cta .btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--whats-dk);
+  color: #FFFFFF !important;
+  font-weight: 700;
+  padding: 0.95rem 1.85rem;
+  border-radius: var(--r-pill);
+  text-decoration: none !important;
+  box-shadow: 0 10px 24px rgba(22, 163, 74, 0.35);
+  transition: transform var(--t-fast), background var(--t-fast);
+}
+
+.post-cta .btn-cta:hover {
+  transform: translateY(-2px);
+  background: #15803D;
+}
+
+.post-back {
+  max-width: 780px;
+  margin: 2rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=pt-BR>
+<html lang="pt-BR">
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
@@ -34,9 +34,9 @@
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Meow+Script&family=Caveat:wght@500;600;700&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Meow+Script&family=Caveat:wght@500;600;700&display=swap"></noscript>
-<link rel=stylesheet href=/style.min.css?v=51>
+
+<noscript></noscript>
+
 <script type="application/ld+json">
 [
   {
@@ -139,262 +139,68 @@
   }
 ]
 </script>
-<style>
-.post-header {
-  padding: 130px 0 45px;
-  position: relative;
-  background: #060c1c;
-  overflow: hidden;
-}
-.post-header::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(45, 78, 158, 0.35) 0%, transparent 70%);
-  pointer-events: none;
-}
-.post-header__inner {
-  max-width: 860px;
-  margin: 0 auto;
-  text-align: left;
-  position: relative;
-  z-index: 1;
-}
-.post-header__tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(120, 182, 82, 0.15);
-  border: 1px solid rgba(120, 182, 82, 0.35);
-  color: var(--green, #78b652);
-  padding: 6px 14px;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  letter-spacing: 0.02em;
-}
-.post-header__title {
-  font-size: clamp(2rem, 4vw, 3rem);
-  line-height: 1.2;
-  font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 16px;
-  letter-spacing: -0.02em;
-}
-.post-header__sub {
-  font-size: 1.15rem;
-  color: rgba(255, 255, 255, 0.82);
-  line-height: 1.6;
-  margin-bottom: 24px;
-}
-.post-header__meta {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.65);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 16px;
-  flex-wrap: wrap;
-}
-.post-wrap {
-  padding: 40px 0 80px;
-  background: var(--bg, #ffffff);
-}
-.post-cover {
-  max-width: 960px;
-  margin: 0 auto 50px;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.1);
-  border: 1px solid var(--line, #e2e8f0);
-}
-.post-cover img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.post-body {
-  max-width: 820px;
-  margin: 0 auto;
-  color: var(--ink, #1a1a1a);
-  font-size: 1.125rem;
-  line-height: 1.85;
-}
-.post-body h2 {
-  font-size: 1.8rem;
-  color: var(--blue-dk, #1e3877);
-  margin: 48px 0 20px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  border-left: 4px solid var(--blue, #2d4e9e);
-  padding-left: 14px;
-  line-height: 1.25;
-}
-.post-body h3 {
-  font-size: 1.35rem;
-  color: var(--ink, #1a1a1a);
-  margin: 32px 0 16px;
-  font-weight: 700;
-  line-height: 1.35;
-}
-.post-body p {
-  color: var(--ink-2, #374151);
-  margin-bottom: 22px;
-}
-.post-body ul, .post-body ol {
-  margin: 0 0 24px 24px;
-  color: var(--ink-2, #374151);
-}
-.post-body li {
-  margin-bottom: 10px;
-  line-height: 1.7;
-}
-.post-body a {
-  color: var(--blue, #2d4e9e);
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  font-weight: 600;
-  transition: color var(--t, 240ms);
-}
-.post-body a:hover {
-  color: var(--green, #78b652);
-}
-.post-alert {
-  background: var(--blue-lt, #e8eef9);
-  border-left: 4px solid var(--blue, #2d4e9e);
-  border-radius: 0 10px 10px 0;
-  padding: 20px 24px;
-  margin: 35px 0;
-  color: var(--ink, #1a1a1a);
-  font-size: 1.05rem;
-}
-.post-alert strong {
-  color: var(--blue-dk, #1e3877);
-  display: block;
-  margin-bottom: 6px;
-  font-size: 0.95rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 800;
-}
-.post-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 35px 0;
-  background: #ffffff;
-  border: 1px solid var(--line, #e2e8f0);
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
-}
-.post-table th, .post-table td {
-  padding: 16px 20px;
-  text-align: left;
-  border-bottom: 1px solid var(--line, #e2e8f0);
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-.post-table th {
-  background: #f1f5f9;
-  color: var(--blue-dk, #1e3877);
-  font-weight: 800;
-}
-.post-table td {
-  color: var(--ink-2, #374151);
-}
-.post-cta {
-  background: linear-gradient(135deg, #0d1527 0%, #172554 100%);
-  border: 1px solid rgba(45, 78, 158, 0.3);
-  border-radius: 16px;
-  padding: 48px 36px;
-  text-align: center;
-  margin: 60px 0 20px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 16px 36px rgba(13, 21, 39, 0.15);
-}
-.post-cta h3 {
-  font-size: 1.75rem;
-  color: #ffffff;
-  margin-bottom: 14px;
-  font-weight: 800;
-}
-.post-cta p {
-  color: rgba(255, 255, 255, 0.85);
-  max-width: 620px;
-  margin: 0 auto 28px;
-  font-size: 1.05rem;
-}
-.post-cta .btn-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--green, #78b652);
-  color: #ffffff;
-  font-weight: 700;
-  padding: 14px 32px;
-  border-radius: 999px;
-  text-decoration: none;
-  box-shadow: 0 8px 20px rgba(120, 182, 82, 0.35);
-  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
-}
-.post-cta .btn-cta:hover {
-  transform: translateY(-2px);
-  background: var(--green-dk, #5e9442);
-  box-shadow: 0 12px 26px rgba(120, 182, 82, 0.5);
-  color: #ffffff;
-}
-</style>
+  <link rel="ai-content-declaration" href="/llms.txt" type="text/plain">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/assets/css/v3.css?v=2">
 </head>
 <body>
-<header class="hd hd--hero">
-<div class="hd__inner container">
-<a class=hd__logo href=/>
-<img src="/assets/images/logo-anaue-design-marketing-ia-negativo.png" alt="Anauê Design" width=131 height=45>
-</a>
-<button class="hd__toggle" aria-label="Abrir menu" aria-expanded="false">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-</button>
-<nav class=hd__nav aria-label="Navegação principal">
-<a href=/quem-somos.html>Quem Somos</a>
-<a href=/criacao-de-sites.html>Criação de Sites/PWA</a>
-<a href=/marketing-digital.html>Marketing Digital</a>
-<a href=/seo.html>SEO</a>
-<a href=/inteligencia-artificial.html>IA/Automação</a>
-<a href=/customizacao-moodle.html>Customização Moodle</a>
-<a href=/hospedagem.html>Hospedagem Gerenciada</a>
-</nav>
-<a class="hd__cta" href="https://wa.me/5585996277707?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento" target="_blank" rel="noopener noreferrer nofollow">
-<span>Pedir Orçamento</span>
-<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-</a>
-</div>
-</header>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="header__logo" href="/" aria-label="Anauê Design — Início">
+        <img src="/assets/images/logo-anaue.webp" alt="Anauê Design" width="131" height="45">
+      </a>
+      <nav class="header__nav" aria-label="Navegação principal">
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__trigger" type="button" aria-expanded="false">
+            Soluções
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown__menu" role="menu">
+            <a class="nav-dropdown__item" href="/criacao-de-sites.html"><strong>Sites &amp; PWAs de Alta Conversão</strong><span>Performance 99+ no PageSpeed e UX sob medida</span></a>
+            <a class="nav-dropdown__item" href="/inteligencia-artificial.html"><strong>IA &amp; Automação no WhatsApp</strong><span>Agentes humanizados 24/7 integrados ao CRM</span></a>
+            <a class="nav-dropdown__item" href="/marketing-digital.html"><strong>Marketing &amp; Tráfego Pago</strong><span>Inbound, Outbound e mídia orientada a ROI</span></a>
+            <a class="nav-dropdown__item" href="/seo.html"><strong>SEO Técnico &amp; GEO (Buscas por IA)</strong><span>Primeira página no Google e citações em IAs</span></a>
+            <a class="nav-dropdown__item" href="/customizacao-moodle.html"><strong>Plataformas EAD &amp; Moodle</strong><span>Temas exclusivos, plugins e checkout PIX</span></a>
+            <a class="nav-dropdown__item" href="/hospedagem.html"><strong>Hospedagem Gerenciada NVMe</strong><span>Infraestrutura isolada com suporte humano</span></a>
+          </div>
+        </div>
+        <a class="header__link" href="/#diagnostico">Diagnóstico</a>
+        <a class="header__link" href="/blog.html" style="color:var(--brand-blue);font-weight:700">Blog</a>
+        <a class="header__link" href="/quem-somos.html">Quem Somos</a>
+      </nav>
+      <div class="header__actions">
+        <span class="header__status"><span class="status-dot" aria-hidden="true"></span>Atendimento humano</span>
+        <a class="btn btn--primary" href="https://wa.me/5585996277707?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20um%20projeto%20com%20a%20Anau%C3%AA%20Design" target="_blank" rel="noopener noreferrer nofollow">Conversar agora</a>
+        <button class="header__toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
 
-<main>
-<header class="post-header">
-<div class="container post-header__inner">
-<span class="post-header__tag">✦ IA & SEO Estratégico</span>
-<h1 class="post-header__title">GEO (Generative Engine Optimization): O Guia Definitivo para Posicionamento em IAs</h1>
-<p class="post-header__sub">Como estruturar sua marca para ser a resposta número um citada por ChatGPT, Perplexity, Gemini e Google AI Overviews.</p>
-<div class="post-header__meta">
-<span>📅 02 Out 2026</span>
+  <main>
+    <header class="post-hero">
+      <div class="container post-hero__inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Início</a> <span>/</span> <a href="/blog.html">Blog</a> <span>/</span> <span aria-current="page">IA & SEO Estratégico</span>
+        </nav>
+        <span class="post-hero__tag">✦ IA & SEO Estratégico</span>
+        <h1 class="post-hero__title">GEO (Generative Engine Optimization): O Guia Definitivo para Posicionamento em IAs</h1>
+        <p class="post-hero__sub">Como estruturar sua marca para ser a resposta número um citada por ChatGPT, Perplexity, Gemini e Google AI Overviews.</p>
+        <div class="post-hero__meta"><span>📅 02 Out 2026</span>
 <span>⏱️ 6 min de leitura</span>
-<span>✍️ Por Redação Anauê Design</span>
-</div>
-</div>
-</header>
+<span>✍️ Por Redação Anauê Design</span></div>
+      </div>
+    </header>
 
-<div class="post-wrap">
-<div class="container">
-<div class="post-cover">
-<img src="/assets/images/blog/geo-generative-engine-optimization-2026.webp" alt="Especialistas analisando dados de GEO e inteligência artificial generativa na Anauê Design" width="1200" height="630" loading="eager" fetchpriority="high">
-</div>
+    <div class="post-wrap">
+      <div class="container">
+        <div class="post-cover">
+          <img src="/assets/images/blog/geo-generative-engine-optimization-2026.webp" alt="Especialistas analisando dados de GEO e inteligência artificial generativa na Anauê Design" width="1200" height="630" loading="eager" fetchpriority="high">
+        </div>
 
-<article class="post-body">
-<p>Durante mais de duas décadas, a batalha pela atenção digital resumiu-se a uma única métrica de ouro: <strong>conquistar a primeira posição nos dez links azuis do Google</strong>. Em 2026, esse paradigma sofreu a transformação mais profunda da história da internet. Com mais de 45% das consultas de busca migrando para respostas diretas sintetizadas por motores de inteligência artificial — como o <strong>ChatGPT Search, Perplexity, Google Gemini e Claude</strong> —, o usuário não quer mais garimpar dezenas de páginas. Ele exige a resposta pronta, contextualizada e precisa.</p>
+        <article class="post-body">
+          <p>Durante mais de duas décadas, a batalha pela atenção digital resumiu-se a uma única métrica de ouro: <strong>conquistar a primeira posição nos dez links azuis do Google</strong>. Em 2026, esse paradigma sofreu a transformação mais profunda da história da internet. Com mais de 45% das consultas de busca migrando para respostas diretas sintetizadas por motores de inteligência artificial — como o <strong>ChatGPT Search, Perplexity, Google Gemini e Claude</strong> —, o usuário não quer mais garimpar dezenas de páginas. Ele exige a resposta pronta, contextualizada e precisa.</p>
 
 <p>É dessa virada tecnológica que surge o <strong>GEO (Generative Engine Optimization)</strong>, a metodologia indispensável para que o ecossistema digital da sua empresa não seja ignorado pelos grandes modelos de linguagem (LLMs). Se a sua marca não for compreendida pelas IAs como uma autoridade primária, ela simplesmente não existirá nas recomendações do futuro.</p>
 
@@ -473,45 +279,58 @@ Pesquisas recentes de institutos de tecnologia apontam que marcas que implementa
 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
 </a>
 </div>
-</article>
-</div>
-</div>
-</main>
+        </article>
 
-<footer class=ft>
-<div class="ft__inner container">
-<div class=ft__brand>
-<img src="/assets/images/logo-anaue-design-marketing-ia-negativo.png" alt="Anauê Design" width=131 height=45>
-<p>Agência de marketing digital em Fortaleza. Sites, IA, SEO, Webmaster e hospedagem sob medida.</p>
-<span class=ft__tag>by Anauê <em>team</em></span>
-</div>
-<div class=ft__col>
-<h4>Navegação</h4>
-<a href=/quem-somos.html>Quem Somos</a>
-<a href=/criacao-de-sites.html>Criação de Sites/PWA</a>
-<a href=/marketing-digital.html>Marketing Digital</a>
-<a href=/seo.html>SEO</a>
-<a href=/inteligencia-artificial.html>IA/Automação</a>
-<a href=/customizacao-moodle.html>Customização Moodle</a>
-<a href=/hospedagem.html>Hospedagem Gerenciada</a>
-<a href=/ria360/>RIA360</a>
-<a href=/blog.html>Blog</a>
-<a href=/politica-de-privacidade.html>Política de Privacidade</a>
-</div>
-<div class=ft__col>
-<h4>Contato</h4>
-<a href="https://wa.me/5585996277707" target=_blank rel="noopener noreferrer nofollow"><span>+55 (85) 99627-7707</span></a>
-<a href=mailto:contato@anauedesign.com.br><span>contato@anauedesign.com.br</span></a>
-<span>Rua Sapiranga, Fortaleza - CE</span>
-</div>
-</div>
-<div class=ft__bottom>
-<div class=container>
-<span>© 2026 Anauê Design · CNPJ 42.185.093/0001-00</span>
-<span class=ft__bottom-tag>Feito com <em>✦</em> em Fortaleza</span>
-</div>
-</div>
-</footer>
-<script src=/script.min.js?v=51></script>
+        <div class="post-back">
+          <a class="btn btn--outline" href="/blog.html">← Voltar para todos os artigos</a>
+          <a class="btn btn--primary" href="/#diagnostico">Fazer diagnóstico rápido</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="/assets/images/logo-anaue-design-marketing-ia-negativo.png" alt="Anauê Design" width="131" height="45">
+          <p>Agência de marketing digital, engenharia web, inteligência artificial, SEO/GEO e hospedagem gerenciada em Fortaleza — atendimento Brasil e exterior.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Soluções</h4>
+          <a href="/criacao-de-sites.html">Criação de Sites &amp; PWA</a>
+          <a href="/inteligencia-artificial.html">IA &amp; Automação</a>
+          <a href="/marketing-digital.html">Marketing &amp; Tráfego</a>
+          <a href="/seo.html">SEO &amp; GEO</a>
+          <a href="/customizacao-moodle.html">Customização Moodle</a>
+          <a href="/hospedagem.html">Hospedagem Gerenciada</a>
+        </div>
+        <div class="footer__col">
+          <h4>Institucional</h4>
+          <a href="/quem-somos.html">Quem Somos</a>
+          <a href="/blog.html">Blog Editorial</a>
+          <a href="/ria360/">RIA360</a>
+          <a href="/politica-de-privacidade.html">Política de Privacidade</a>
+        </div>
+        <div class="footer__col">
+          <h4>Contato direto</h4>
+          <a href="https://wa.me/5585996277707" target="_blank" rel="noopener noreferrer nofollow">+55 (85) 99627-7707</a>
+          <a href="mailto:contato@anauedesign.com.br">contato@anauedesign.com.br</a>
+          <span>Rua Sapiranga, Fortaleza - CE</span>
+          <span>Seg–Sex · 08h às 18h</span>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Anauê Design · CNPJ 42.185.093/0001-00</span>
+        <span>Feito com cuidado em Fortaleza</span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="fab-wa" href="https://wa.me/5585996277707?text=Ol%C3%A1!%20Vim%20pelo%20blog%20da%20Anau%C3%AA%20Design" target="_blank" rel="noopener noreferrer nofollow" aria-label="Falar pelo WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.7-.9-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2 1.7.7 2.3.8 3.1.7.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.3-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5c1.5.8 3.2 1.2 5 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+  </a>
+
+  <script src="/assets/js/v3.js?v=2"></script>
 </body>
 </html>
