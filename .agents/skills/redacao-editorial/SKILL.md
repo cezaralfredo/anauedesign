@@ -160,15 +160,19 @@ Todo artigo gerado deve conter:
 
 ---
 
-## 6. Direção de Arte e Imagem de Capa (Padrão Google Discover & Fotografia Editorial Humanizada)
+## 6. Direção de Arte e Imagem de Capa (Sistema Modular de 6 Arquétipos + Google Discover)
 
-- Criar uma capa proporcional 16:9 através da ferramenta de geração de imagens (largura mínima de **1200px**, obrigatória para o Google Discover).
-- **NOVA DIRETRIZ VISUAL: FOTOGRAFIA EDITORIAL HUMANIZADA (SEM RENDERS 3D/CGI):**
-  - **Estilo:** Fotografia editorial corporativa moderna e autêntica (estilo _Wired_, _Fast Company_, _Bloomberg Businessweek_), com estética cinematográfica e calor humano.
-  - **Presença Humana Natural:** Pessoas e profissionais reais em interações genuínas no ambiente de trabalho contemporâneo (colaborando em salas iluminadas, imersos em planejamento estratégico, interagindo com telas de forma orgânica, mentorias ou momentos de foco). Gestos autênticos, sem poses caricatas de banco de imagens gratuito nem "sorrisos de comercial".
-  - **Iluminação & Textura:** Iluminação natural de grandes janelas ou luz de estúdio suave (soft light), profundidade de campo suave (bokeh cinematográfico focando na pessoa/ação e desfocando o fundo), texturas orgânicas reais.
-  - **PROIBIDO (Anti-Padrão 3D/CGI):** Renders plásticos em 3D, elementos isométricos flutuantes, esferas de vidro digitais, hologramas neon, cabos e circuitos flutuantes abstratos ou robôs clichês. A tecnologia deve ser retratada como extensão humana (em notebooks de borda fina, tablets, displays corporativos ou anotações reais).
-  - **Harmonização Cromática Anauê:** As cores institucionais (azul profundo `#0a1128`, toques pontuais de ciano `#00e5ff` e verde `#57b952`) entram de forma orgânica e sutil: na paleta de cores do ambiente, iluminação indireta suave (luzes de fundo), detalhes de figurino elegante ou arquitetura moderna de agência/escritório.
+- Criar uma capa proporcional **16:9** através da ferramenta de geração de imagens (largura mínima de **1200px**, obrigatória para o Google Discover).
+- **UNIDADE PELA PALETA, DIVERSIDADE PELA LINGUAGEM VISUAL:**
+  - Para evitar monotonia no grid do blog (jamais repetir a mesma cena de "duas pessoas em frente a um notebook" em sequência), toda capa DEVE escolher **1 dos 6 Arquétipos Visuais** abaixo, mantendo coesão através da **paleta Anauê** (off-white quente `#FAFBFD`, azul profundo `#0B132B` / `#1E3A8A` e acento verde `#57B952`):
+  1. **Ilustração Editorial Conceitual (*Harvard Business Review* / *Stripe Press* / *The New Yorker*):** Arte autoral com textura de papel/risografia e metáforas visuais inteligentes (ex.: labirinto se abrindo em linha reta, bússola semântica, funil virando ponte). *Ideal para SEO/GEO, CRO e Estratégia.*
+  2. **Colagem Editorial + Grafismo Suíço (*Bloomberg Businessweek* / *Financial Times*):** Fotografia real em P&B ou dessaturada combinada com blocos geométricos limpos em azul-marinho e verde Anauê. *Ideal para Marketing Digital, Mídia Paga, ROI e CAC.*
+  3. **Still Life & Macro Tátil — Sem Pessoas (*Monocle* / *Kinfolk*):** Composição minimalista de objetos reais com luz natural de janela (caderno aberto com esboço de fluxo, café, smartphone sobre madeira/pedra, detalhe de hardware). *Ideal para WhatsApp & IA, UX/UI e Automação de Vendas.*
+  4. **Perspectiva Aérea — *Flat Lay 90°* (*Fast Company* / *Figma Blog*):** Câmera vista de cima sobre mesa de trabalho real organizada (wireframes impressos, tablet, notas, paleta cromática). *Ideal para Branding, Design System, Sites/PWAs e Moodle.*
+  5. **Minimalismo Arquitetônico & Luz (*Architectural Digest* / *Linear*):** Linhas geométricas de arquitetura contemporânea, vidro, concreto claro e jogo dramático de luz e sombra transmitindo solidez e velocidade. *Ideal para Hospedagem NVMe, Segurança Digital e LGPD.*
+  6. **Retrato Ambiental com Espaço Negativo (*Wired* / *Forbes*):** Um único protagonista em cena autêntica (escrevendo em quadro de vidro, em ligação estratégica ou ambiente corporativo amplo), sem poses artificiais de banco de imagens. *Ideal para Cases, Liderança e EAD Corporativo.*
+- **REGRA DE RODÍZIO ANTI-REPETIÇÃO (OBRIGATÓRIA):** Antes de gerar a capa, o agente DEVE verificar o estilo usado nos **últimos 2 artigos publicados** e selecionar obrigatoriamente um arquétipo diferente.
+- **PROIBIDO (Anti-Padrão 3D/CGI):** Renders plásticos em 3D, elementos isométricos flutuantes, esferas de vidro digitais, hologramas neon, cadeados/circuitos flutuantes ou robôs clichês.
 - **REGRA TÉCNICA DE COMPRESSÃO (WebP Real):** A imagem gerada DEVE ser salva ou convertida como formato **WebP legítimo** (com assinatura `RIFF...WEBP`), qualidade 82 e peso inferior a 120 KB. Jamais renomear um arquivo JPEG ou PNG bruto para `.webp` sem transcodificação.
 - Salvar em: `assets/images/blog/<slug-do-artigo>.webp`.
 
