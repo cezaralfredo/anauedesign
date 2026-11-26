@@ -96,7 +96,7 @@ function commitAndPushPost({ slug, title }) {
   try {
     console.log(`[GIT] Adicionando arquivos da matéria ${slug}...`);
     execSync('git add blog/ assets/images/blog/ blog.html sitemap.xml llms.txt .agents/', { cwd: ROOT_DIR, stdio: 'inherit' });
-    
+
     const commitMsg = `feat(editorial): publicar materia ${slug}`;
     console.log(`[GIT] Executando commit: "${commitMsg}"...`);
     execSync(`git commit -m "${commitMsg}"`, { cwd: ROOT_DIR, stdio: 'inherit' });
